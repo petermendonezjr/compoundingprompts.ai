@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Consulting for Small Business | Compounding Prompts</title>
+    <meta name="description" content="Compounding Prompts delivers AI automation, custom apps, and consulting for small-to-medium businesses. Free 2-hour consultation. Production-grade results.">
+    <meta name="keywords" content="AI consulting, AI automation, small business AI, AI consultant, workflow automation, custom AI apps, AI readiness, PMO systems, API integration, dashboarding">
+    <meta name="author" content="Compounding Prompts">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Consulting for Small Business | Compounding Prompts">
+    <meta property="og:description" content="Production-grade AI solutions for growing businesses. Free 2-hour consultation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://compoundingprompts.ai">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Consulting for Small Business | Compounding Prompts">
+    <meta name="twitter:description" content="Production-grade AI solutions for growing businesses. Free 2-hour consultation.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://compoundingprompts.ai">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Compounding Prompts",
+        "description": "AI consulting and automation services for small-to-medium businesses.",
+        "url": "https://compoundingprompts.ai",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "availableLanguage": "English"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <!-- Schema.org Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "provider": {
+            "@type": "Organization",
+            "name": "Compounding Prompts"
+        },
+        "serviceType": "AI Consulting",
+        "areaServed": "US",
+        "description": "AI automation, custom applications, workflow design, and consulting for small-to-medium businesses.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free 2-hour initial consultation to identify AI opportunities for your business"
+        }
+    }
+    </script>
+
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much does AI consulting cost for a small business?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We price our projects to work for small businesses, not enterprise budgets. Every engagement starts with a free 2-hour consultation where we scope the work together, then you get a fixed-price proposal with clear deliverables and timeline."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need AI for my business?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If your team spends time on repetitive tasks like data entry, report generation, scheduling, or customer follow-up, AI can likely save significant time and money. Our free consultation identifies specific opportunities for your business."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What do I own after a project?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Everything. All code, designs, documentation, and deliverables are yours. No vendor lock-in, no ongoing maintenance contracts required."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ===== CSS CUSTOM PROPERTIES ===== */
+        :root {
+            /* Backgrounds — Warm Precision (Option K) */
+            --bg-base: #F7F5F0;
+            --bg-surface: #FFFFFF;
+            --bg-elevated: #EDF0F4;
+
+            /* Accent — Deep Ocean Blue */
+            --accent: #1565C0;
+            --accent-light: #1976D2;
+            --accent-dark: #0D47A1;
+            --accent-glow: rgba(21, 101, 192, 0.06);
+            --accent-warm: #E8F0FE;
+
+            /* Secondary — Teal Signal */
+            --secondary: #00897B;
+
+            /* Text */
+            --text-1: #263238;
+            --text-2: #546E7A;
+            --text-3: #90A4AE;
+
+            /* Borders */
+            --border: #C8CCD0;
+
+            /* Status */
+            --ok: #10B981;
+            --warn: #F59E0B;
+            --crit: #EF4444;
+            --info: #1565C0;
+
+            /* Tokens */
+            --radius-card: 12px;
+            --radius-btn: 8px;
+            --radius-pill: 9999px;
+            --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+            --shadow-elevated: 0 4px 12px rgba(0,0,0,0.08), 0 16px 48px rgba(0,0,0,0.06);
+            --transition: all 0.2s ease;
+            --max-width: 1200px;
+
+            /* Fonts */
+            --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+
+        /* ===== RESET ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-base);
+            color: var(--text-2);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+
+        /* ===== UTILITY ===== */
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .accent { color: var(--accent); }
+        .mono { font-family: var(--font-mono); }
+        .section-label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 600;
+            color: var(--text-1);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-2);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* ===== NOISE OVERLAY ===== */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.02;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        /* ===== NAV ===== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+        .nav.scrolled {
+            background: rgba(247, 245, 240, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-1);
+        }
+        .nav-logo svg { width: 32px; height: 32px; flex-shrink: 0; }
+        .nav-logo span:last-child { color: var(--accent); }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-2);
+            transition: var(--transition);
+        }
+        .nav-links a:hover { color: var(--text-1); }
+        .nav-cta {
+            padding: 8px 20px;
+            background: var(--accent);
+            color: #FFFFFF !important;
+            font-weight: 600 !important;
+            border-radius: var(--radius-btn);
+            transition: var(--transition);
+        }
+        .nav-cta:hover { background: var(--accent-light) !important; }
+
+        /* Mobile Nav Toggle */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .nav-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-1);
+            transition: var(--transition);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--bg-base), var(--bg-surface));
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 60% 40%, var(--accent-glow) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-content { max-width: 720px; }
+        .hero-label {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            padding: 6px 16px;
+            border: 1px solid rgba(21, 101, 192, 0.25);
+            border-radius: var(--radius-pill);
+            margin-bottom: 28px;
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 600;
+            color: var(--text-1);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-2);
+            max-width: 560px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: var(--radius-btn);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #FFFFFF;
+        }
+        .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-1);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-warm); }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        .hero-stat-value {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary, var(--accent));
+        }
+        .hero-stat-label {
+            font-size: 0.8rem;
+            color: var(--text-3);
+            margin-top: 4px;
+        }
+
+        /* ===== SERVICES ===== */
+        .services { padding: 120px 0; }
+        .services-header { margin-bottom: 64px; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .service-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            padding: 32px 28px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            border-color: rgba(21, 101, 192, 0.15);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-elevated);
+        }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            display: block;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(21, 101, 192, 0.08);
+            border-radius: 10px;
+        }
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-1);
+            margin-bottom: 8px;
+        }
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--text-2);
+            line-height: 1.6;
+        }
+        .service-tag {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 500;
+            padding: 3px 10px;
+            border-radius: var(--radius-pill);
+            margin-top: 16px;
+            background: rgba(21, 101, 192, 0.08);
+            color: var(--accent);
+        }
+        .service-card.featured {
+            border-color: rgba(21, 101, 192, 0.25);
+            background: linear-gradient(135deg, var(--bg-surface), rgba(21, 101, 192, 0.03));
+        }
+        .service-card.featured .service-tag {
+            background: var(--accent);
+            color: #FFFFFF;
+        }
+
+        /* ===== PORTFOLIO ===== */
+        .portfolio {
+            padding: 120px 0;
+            background: var(--bg-surface);
+        }
+        .portfolio-header { margin-bottom: 64px; }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .portfolio-card {
+            background: var(--bg-base);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .portfolio-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-elevated);
+            border-color: rgba(21, 101, 192, 0.12);
+        }
+        .portfolio-body { padding: 28px; }
+        .portfolio-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .portfolio-symbol {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(21, 101, 192, 0.08);
+            border-radius: 10px;
+            color: var(--accent);
+        }
+        .portfolio-type {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }
+        .portfolio-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-1);
+        }
+        .portfolio-card p {
+            font-size: 0.875rem;
+            color: var(--text-2);
+            line-height: 1.6;
+        }
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 16px;
+        }
+        .portfolio-tags span {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-pill);
+            color: var(--text-3);
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .process { padding: 120px 0; }
+        .process-header { margin-bottom: 64px; }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        .process-number {
+            font-family: var(--font-mono);
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: 0.15;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        .process-step h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-1);
+            margin-bottom: 8px;
+        }
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--text-2);
+            max-width: 300px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ===== DIFFERENTIATORS ===== */
+        .diff { padding: 120px 0; background: var(--bg-surface); }
+        .diff-header { margin-bottom: 64px; }
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .diff-item {
+            display: flex;
+            gap: 16px;
+            padding: 24px;
+            background: var(--bg-base);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+        }
+        .diff-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            background: rgba(21, 101, 192, 0.08);
+            border-radius: 8px;
+        }
+        .diff-item h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-1);
+            margin-bottom: 4px;
+        }
+        .diff-item p {
+            font-size: 0.85rem;
+            color: var(--text-2);
+            line-height: 1.5;
+        }
+
+        /* ===== FAQ ===== */
+        .faq { padding: 120px 0; }
+        .faq-header { margin-bottom: 64px; }
+        .faq-list {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-1);
+            transition: var(--transition);
+        }
+        .faq-question:hover { color: var(--accent); }
+        .faq-chevron {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+            color: var(--text-3);
+        }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer-inner {
+            padding-top: 12px;
+            font-size: 0.9rem;
+            color: var(--text-2);
+            line-height: 1.7;
+        }
+        .faq-item.open .faq-answer { max-height: 300px; }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-form {
+            max-width: 560px;
+            margin: 32px auto 0;
+            text-align: left;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-2);
+            margin-bottom: 6px;
+        }
+        .form-optional {
+            color: var(--text-3);
+            font-weight: 400;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--text-1);
+            background: var(--bg-base);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-btn);
+            transition: var(--transition);
+            outline: none;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-3);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .btn-submit {
+            width: 100%;
+            justify-content: center;
+            margin-top: 8px;
+        }
+        .form-status {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            min-height: 20px;
+        }
+        .form-status.success { color: var(--ok); }
+        .form-status.error { color: var(--crit); }
+        @media (max-width: 480px) {
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            padding: 120px 0;
+            background: var(--bg-surface);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 50%, var(--accent-glow) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .cta .container { position: relative; z-index: 1; }
+        .cta h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+            color: var(--text-1);
+            margin-bottom: 16px;
+        }
+        .cta p {
+            font-size: 1.1rem;
+            color: var(--text-2);
+            max-width: 520px;
+            margin: 0 auto 40px;
+        }
+        .cta-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .cta-detail {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-3);
+        }
+        .cta-detail svg {
+            width: 16px;
+            height: 16px;
+            color: var(--ok);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 48px 0 32px;
+            border-top: 1px solid var(--border);
+        }
+        .footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-2);
+        }
+        .footer-left svg { width: 24px; height: 24px; }
+        .footer-right {
+            font-size: 0.8rem;
+            color: var(--text-3);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(247, 245, 240, 0.98);
+                backdrop-filter: blur(12px);
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid var(--border);
+            }
+            .nav-toggle { display: flex; }
+            .hero { min-height: auto; padding: 120px 0 64px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero-stats { flex-direction: column; gap: 20px; }
+            .process-steps { grid-template-columns: 1fr; gap: 48px; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .diff-grid { grid-template-columns: 1fr; }
+            .cta-details { flex-direction: column; align-items: center; gap: 16px; }
+            .footer .container { flex-direction: column; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .hero h1 { font-size: 1.8rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .hero-actions { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <a href="#" class="nav-logo">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(8, 8)">
+                        <path d="M 0 40 L 24 24 L 0 8" stroke="#1565C0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+                        <path d="M 10 38 L 34 22 L 10 6" stroke="#1565C0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+                        <path d="M 20 36 L 44 20 L 20 4" stroke="#1565C0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+                <span>Compounding</span><span>Prompts</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#process">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-label">AI CONSULTING FOR GROWING COMPANIES</span>
+                <h1>AI solutions that <span class="accent">compound.</span></h1>
+                <p>We build production-grade AI for small-to-medium businesses. Workflow automation, custom apps, dashboards, data analytics, financial modeling, and more. All at a fraction of traditional consulting costs.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+                    <a href="#portfolio" class="btn btn-secondary">See Our Work</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-value">Free</div>
+                        <div class="hero-stat-label">2-Hour Consultation</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-value">100%</div>
+                        <div class="hero-stat-label">Ownership. No Lock-In.</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-value">US</div>
+                        <div class="hero-stat-label">Based &amp; Built in America</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-header reveal">
+                <div class="section-label">Services</div>
+                <h2 class="section-title">What we build</h2>
+                <p class="section-subtitle">Every service delivers a production-grade result you own outright. No vendor lock-in. No maintenance contracts.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>AI Readiness Package</h3>
+                    <p>Get your business AI-ready. We map your workflows, recommend tools, build team presentations, and create a practical AI adoption plan.</p>
+                    <span class="service-tag">BEST STARTING POINT</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+                    </div>
+                    <h3>Workflow Automation</h3>
+                    <p>Eliminate repetitive tasks. We design and implement AI-powered workflows that save your team hours every week.</p>
+                    <span class="service-tag">MOST REQUESTED</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                    </div>
+                    <h3>Website Creation</h3>
+                    <p>Full-stack web applications and marketing sites built with modern frameworks. Fast, responsive, and ready to scale.</p>
+                    <span class="service-tag">FULL-STACK</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    </div>
+                    <h3>PMO System Design</h3>
+                    <p>Project management frameworks, portfolio dashboards, and operational tooling that bring structure to growing teams.</p>
+                    <span class="service-tag">OPERATIONS</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                    </div>
+                    <h3>API Integrations</h3>
+                    <p>Connect your existing tools with AI capabilities. We wire up CRMs, ERPs, and third-party services into unified workflows.</p>
+                    <span class="service-tag">INTEGRATION</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    </div>
+                    <h3>Dashboarding</h3>
+                    <p>Turn scattered data into clear, actionable dashboards. Real-time analytics and reporting your whole team can use.</p>
+                    <span class="service-tag">ANALYTICS</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 14h3"/><path d="M1 9h3"/><path d="M1 14h3"/></svg>
+                    </div>
+                    <h3>Custom Applications</h3>
+                    <p>Bespoke AI-powered software built for your exact needs. From internal tools to customer-facing products.</p>
+                    <span class="service-tag">CUSTOM BUILD</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M20 8v6"/><path d="M23 11h-6"/></svg>
+                    </div>
+                    <h3>Recruiter &amp; Career Tools</h3>
+                    <p>AI-powered job matching, CV generation, and application intelligence for recruiters and hiring teams.</p>
+                    <span class="service-tag">RECRUITING</span>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    </div>
+                    <h3>Data &amp; Analytics Consulting</h3>
+                    <p>Make sense of your data. We build pipelines, models, and visualizations that turn raw information into clear business decisions.</p>
+                    <span class="service-tag">BIG DATA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio-header reveal">
+                <div class="section-label">Portfolio</div>
+                <h2 class="section-title">The work speaks</h2>
+                <p class="section-subtitle">Real projects. Production-grade results. Every deliverable is owned outright by the client.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-body">
+                        <div class="portfolio-card-header">
+                            <div>
+                                <div class="portfolio-type">Full-Stack Platform</div>
+                                <h3>Operations Management Platform</h3>
+                            </div>
+                            <div class="portfolio-symbol">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 8h4"/><path d="M7 11h6"/></svg>
+                            </div>
+                        </div>
+                        <p>A complete web platform to manage day-to-day operations across multiple locations. Built with multiple web applications, API services, and real-time infrastructure management.</p>
+                        <div class="portfolio-tags">
+                            <span>Next.js</span>
+                            <span>Node.js</span>
+                            <span>API</span>
+                            <span>Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-body">
+                        <div class="portfolio-card-header">
+                            <div>
+                                <div class="portfolio-type">AI Product</div>
+                                <h3>Voice AI Companion</h3>
+                            </div>
+                            <div class="portfolio-symbol">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                            </div>
+                        </div>
+                        <p>An AI-powered voice assistant that holds natural conversations and keeps families connected. Voice-first interface with family dashboards, authentication, and persona management.</p>
+                        <div class="portfolio-tags">
+                            <span>Voice AI</span>
+                            <span>TTS/STT</span>
+                            <span>Next.js</span>
+                            <span>Prisma</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-body">
+                        <div class="portfolio-card-header">
+                            <div>
+                                <div class="portfolio-type">Investor Presentations</div>
+                                <h3>Investment Decision Suite</h3>
+                            </div>
+                            <div class="portfolio-symbol">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
+                            </div>
+                        </div>
+                        <p>A polished deck series that helps investors evaluate and compare opportunities at a glance. Premium investor-grade presentations with custom design systems and data visualization.</p>
+                        <div class="portfolio-tags">
+                            <span>Design System</span>
+                            <span>Brand ID</span>
+                            <span>HTML Decks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-body">
+                        <div class="portfolio-card-header">
+                            <div>
+                                <div class="portfolio-type">CLI Tool / Automation</div>
+                                <h3>Career Intelligence Platform</h3>
+                            </div>
+                            <div class="portfolio-symbol">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                            </div>
+                        </div>
+                        <p>A smart tool that matches candidates to jobs, generates tailored resumes, and scores applications automatically. Local-first command-line tool with scoring algorithms and truth-check validation.</p>
+                        <div class="portfolio-tags">
+                            <span>Python</span>
+                            <span>Typer CLI</span>
+                            <span>Data Pipeline</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-body">
+                        <div class="portfolio-card-header">
+                            <div>
+                                <div class="portfolio-type">PMO Framework</div>
+                                <h3>Portfolio Management System</h3>
+                            </div>
+                            <div class="portfolio-symbol">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 3h18v18H3z"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                            </div>
+                        </div>
+                        <p>A project management system that tracks budgets, milestones, and team progress in one place. Operations framework with budget templates, stage-gate checklists, and executive reporting dashboards.</p>
+                        <div class="portfolio-tags">
+                            <span>PMO</span>
+                            <span>Budgeting</span>
+                            <span>Operations</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-body">
+                        <div class="portfolio-card-header">
+                            <div>
+                                <div class="portfolio-type">Data Science</div>
+                                <h3>Pricing Analytics Platform</h3>
+                            </div>
+                            <div class="portfolio-symbol">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                            </div>
+                        </div>
+                        <p>A data tool that forecasts pricing trends and spots opportunities before the competition does. Machine learning models, data pipelines, and interactive visualizations built in Python.</p>
+                        <div class="portfolio-tags">
+                            <span>Python</span>
+                            <span>Prophet</span>
+                            <span>scikit-learn</span>
+                            <span>Jupyter</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-body">
+                        <div class="portfolio-card-header">
+                            <div>
+                                <div class="portfolio-type">Brand &amp; Strategy</div>
+                                <h3>Open Infrastructure Initiative</h3>
+                            </div>
+                            <div class="portfolio-symbol">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                            </div>
+                        </div>
+                        <p>A complete brand and communications package for an open-source initiative to expand access. Design system, brand guidelines, and stakeholder documentation from scratch.</p>
+                        <div class="portfolio-tags">
+                            <span>Design System</span>
+                            <span>Brand Guidelines</span>
+                            <span>Stakeholder Docs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-body">
+                        <div class="portfolio-card-header">
+                            <div>
+                                <div class="portfolio-type">Website Development</div>
+                                <h3>Business Marketing Site</h3>
+                            </div>
+                            <div class="portfolio-symbol">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                            </div>
+                        </div>
+                        <p>A fast, professional website built to convert visitors into clients and rank on search engines. Full-stack responsive site with SEO optimization, contact forms, and analytics integration.</p>
+                        <div class="portfolio-tags">
+                            <span>HTML/CSS/JS</span>
+                            <span>SEO</span>
+                            <span>Responsive</span>
+                            <span>Schema.org</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-body">
+                        <div class="portfolio-card-header">
+                            <div>
+                                <div class="portfolio-type">Business Intelligence</div>
+                                <h3>Business Plan &amp; Model Analysis</h3>
+                            </div>
+                            <div class="portfolio-symbol">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                            </div>
+                        </div>
+                        <p>AI-powered analysis that finds the gaps in your business plan and models before investors do. We use AI to audit existing business models, validate assumptions, and identify growth opportunities.</p>
+                        <div class="portfolio-tags">
+                            <span>AI Analysis</span>
+                            <span>Business Model</span>
+                            <span>Gap Analysis</span>
+                            <span>Strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="process-header reveal">
+                <div class="section-label">How It Works</div>
+                <h2 class="section-title">Start small. See results. Then decide.</h2>
+                <p class="section-subtitle">No lengthy proposals. No jargon. Just a clear path from first call to production-grade deliverable.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="process-number">01</div>
+                    <h3>Free Consultation</h3>
+                    <p>Book a 2-hour call. We'll learn about your business and identify specific opportunities where AI can save you time and money.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-number">02</div>
+                    <h3>Fixed-Price Proposal</h3>
+                    <p>We scope the project with a clear deliverable, timeline, and total cost. No hourly billing. No surprises.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-number">03</div>
+                    <h3>Build, Train &amp; Deliver</h3>
+                    <p>We build it, train your team to use it, and hand it all over. Full documentation, no vendor lock-in. Results compound from project to project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DIFFERENTIATORS ===== -->
+    <section class="diff" id="why-us">
+        <div class="container">
+            <div class="diff-header reveal">
+                <div class="section-label">Why Compounding Prompts</div>
+                <h2 class="section-title">Built different</h2>
+                <p class="section-subtitle">We deliver more for less because we use the same AI tools we build for our clients.</p>
+            </div>
+            <div class="diff-grid">
+                <div class="diff-item reveal">
+                    <div class="diff-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M12 1v4"/><path d="M12 19v4"/><path d="M5.64 5.64l2.83 2.83"/><path d="M15.54 15.54l2.83 2.83"/><path d="M1 12h4"/><path d="M19 12h4"/><path d="M5.64 18.36l2.83-2.83"/><path d="M15.54 8.46l2.83-2.83"/></svg>
+                    </div>
+                    <div>
+                        <h3>Production-Grade, Not Prototypes</h3>
+                        <p>Every deliverable is built to deploy, not to demo. Real code, real infrastructure, real results.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal">
+                    <div class="diff-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div>
+                        <h3>You Own Everything</h3>
+                        <p>All code, designs, and documentation are yours. No ongoing fees. No vendor lock-in. Walk away with everything.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal">
+                    <div class="diff-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M16 8l-8 8"/><path d="M8 8l8 8"/></svg>
+                    </div>
+                    <div>
+                        <h3>Fixed Pricing, No Surprises</h3>
+                        <p>Every project has a clear scope and total cost upfront. No hourly billing. No scope creep.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal">
+                    <div class="diff-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                        <h3>100% US-Based</h3>
+                        <p>Your work stays in America. Same timezone, direct communication, no offshore handoffs. We're here when you need us.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal">
+                    <div class="diff-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M14 9V5a3 3 0 00-6 0v4"/><rect x="2" y="9" width="20" height="13" rx="2"/></svg>
+                    </div>
+                    <div>
+                        <h3>Plain English</h3>
+                        <p>No jargon, no buzzwords. We explain what we're building and why in language anyone can follow.</p>
+                    </div>
+                </div>
+                <div class="diff-item reveal">
+                    <div class="diff-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round"><path d="M23 6l-13.5 13.5L4 14"/></svg>
+                    </div>
+                    <div>
+                        <h3>Free 2-Hour Consultation</h3>
+                        <p>No commitment, no pressure. We use the call to understand your business and come back with specific, actionable recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-header reveal">
+                <div class="section-label">FAQ</div>
+                <h2 class="section-title">Common questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        How much does AI consulting cost for a small business?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">We price our projects to work for small businesses, not enterprise budgets. Every engagement starts with a free 2-hour consultation where we scope the work together. After that, you get a clear proposal with a fixed price, defined deliverables, and a timeline. No hourly billing, no surprises.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        Do I need AI for my business?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">If your team spends time on repetitive tasks like data entry, report generation, scheduling, or customer follow-up, AI can likely save significant time and money. Our free consultation identifies specific opportunities for your business with no obligation.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        What do I actually own after a project?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Everything. All code, designs, documentation, and deliverables are yours. There's no vendor lock-in and no ongoing maintenance contracts required. You can take the work to any developer or maintain it yourself.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        What's the AI Readiness Package?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Our entry-level offering for businesses that want to become AI-forward. We audit your workflows across departments, recommend the right tools, build team presentations, and deliver a practical AI adoption roadmap. It's designed as a low-cost starting point that leads naturally into deeper projects.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        How long does a typical project take?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Most projects deliver results in 2-4 weeks. We scope every engagement with a clear timeline upfront. Larger platform builds may take longer, but we always start with a quick win so you see value fast.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        I'm a solo entrepreneur. Is this for me?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Absolutely. Our AI Readiness Package is built for solopreneurs and small teams who want to work smarter with AI. We help you identify which tools to use, how to automate your most time-consuming tasks, and where AI gives you the biggest edge.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        Do you train my team on what you build?
+                        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Every project includes hands-on training. We walk your team through everything we built: how to use it, how to maintain it, and how to get the most out of it. You'll get recorded walkthroughs, written documentation, and a live Q&amp;A session so nobody's left guessing. The goal is full independence. You shouldn't need us to run what we delivered.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA / CONTACT FORM ===== -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="section-label">Get Started</div>
+            <h2>Ready to <span class="accent">compound</span> your results?</h2>
+            <p>Book a free 2-hour consultation. We'll learn about your business and come back with specific, actionable recommendations.</p>
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactName">Your Name</label>
+                        <input type="text" id="contactName" name="name" placeholder="Jane Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" name="email" placeholder="jane@company.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contactCompany">Company <span class="form-optional">(optional)</span></label>
+                    <input type="text" id="contactCompany" name="company" placeholder="Acme Corp">
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">What can we help with?</label>
+                    <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us about your business and what you're looking to automate or build..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Book Free Consultation</button>
+                <div class="form-status" id="formStatus"></div>
+            </form>
+            <div class="cta-details">
+                <div class="cta-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    2 hours, no charge
+                </div>
+                <div class="cta-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    We work with businesses your size
+                </div>
+                <div class="cta-detail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Actionable recommendations
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-left">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(8, 8)">
+                        <path d="M 0 40 L 24 24 L 0 8" stroke="#1565C0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+                        <path d="M 10 38 L 34 22 L 10 6" stroke="#1565C0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+                        <path d="M 20 36 L 44 20 L 20 4" stroke="#1565C0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+                <span>Compounding Prompts</span>
+            </div>
+            <div class="footer-right">
+                &copy; 2026 Compounding Prompts. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Nav scroll effect
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+        // Close mobile nav on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasOpen = item.classList.contains('open');
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                // Toggle clicked
+                if (!wasOpen) item.classList.add('open');
+            });
+        });
+
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Contact Form — Sends to Formspree (or your own endpoint)
+        // SETUP: Replace YOUR_FORM_ID below with your Formspree form ID.
+        // 1. Go to https://formspree.io and create a free account
+        // 2. Create a new form pointed at your email (peter@compoundingprompts.com)
+        // 3. Copy the form ID (e.g., "xpwzjklo") and paste it below
+        const FORM_ENDPOINT = 'https://formspree.io/f/mykdjqgn';
+
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
+
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch(FORM_ENDPOINT, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    formStatus.textContent = 'Message sent! We\'ll be in touch within 24 hours.';
+                    formStatus.classList.add('success');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (err) {
+                formStatus.textContent = 'Something went wrong. Please email us directly at peter@compoundingprompts.com';
+                formStatus.classList.add('error');
+            }
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Book Free Consultation';
+        });
+    </script>
+</body>
+</html>

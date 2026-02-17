@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Insights for Small Business | Compounding Prompts Blog</title>
+    <meta name="description" content="Practical AI guides, automation tips, and case studies for small-to-medium businesses. No jargon, just results.">
+    <meta name="keywords" content="AI blog, small business AI, automation tips, AI consulting blog, AI for SMB">
+    <meta name="author" content="Compounding Prompts">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Insights for Small Business | Compounding Prompts Blog">
+    <meta property="og:description" content="Practical AI guides, automation tips, and case studies for small-to-medium businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://compoundingprompts.ai/blog/">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://compoundingprompts.ai/blog/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-base: #F7F5F0;
+            --bg-surface: #FFFFFF;
+            --bg-elevated: #EDF0F4;
+            --accent: #1565C0;
+            --accent-light: #1976D2;
+            --accent-dark: #0D47A1;
+            --accent-warm: #E8F0FE;
+            --secondary: #00897B;
+            --text-1: #263238;
+            --text-2: #546E7A;
+            --text-3: #90A4AE;
+            --border: #C8CCD0;
+            --ok: #10B981;
+            --radius-card: 12px;
+            --radius-btn: 8px;
+            --radius-pill: 9999px;
+            --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+            --shadow-elevated: 0 4px 12px rgba(0,0,0,0.08), 0 16px 48px rgba(0,0,0,0.06);
+            --transition: all 0.2s ease;
+            --max-width: 1200px;
+            --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-base);
+            color: var(--text-2);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .accent { color: var(--accent); }
+
+        /* ===== NAV ===== */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            background: rgba(247, 245, 240, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-1);
+        }
+        .nav-logo svg { width: 32px; height: 32px; flex-shrink: 0; }
+        .nav-logo span:last-child { color: var(--accent); }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-2);
+            transition: var(--transition);
+        }
+        .nav-links a:hover { color: var(--text-1); }
+        .nav-cta {
+            padding: 8px 20px;
+            background: var(--accent);
+            color: #FFFFFF !important;
+            font-weight: 600 !important;
+            border-radius: var(--radius-btn);
+            transition: var(--transition);
+        }
+        .nav-cta:hover { background: var(--accent-light) !important; }
+
+        /* ===== BLOG HEADER ===== */
+        .blog-header {
+            padding: 80px 0 48px;
+        }
+        .blog-header h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 600;
+            color: var(--text-1);
+            margin-bottom: 12px;
+        }
+        .blog-header p {
+            font-size: 1.1rem;
+            color: var(--text-2);
+            max-width: 560px;
+        }
+        .blog-label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        /* ===== COMING SOON ===== */
+        .coming-soon {
+            padding: 80px 0 120px;
+        }
+        .coming-soon-card {
+            max-width: 640px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-card);
+            padding: 48px;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+        }
+        .coming-soon-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(21, 101, 192, 0.08);
+            border-radius: 16px;
+            color: var(--accent);
+        }
+        .coming-soon-card h2 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-1);
+            margin-bottom: 12px;
+        }
+        .coming-soon-card p {
+            font-size: 0.95rem;
+            color: var(--text-2);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .coming-soon-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        .coming-soon-topics span {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-pill);
+            color: var(--text-3);
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: var(--radius-btn);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #FFFFFF;
+        }
+        .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 48px 0 32px;
+            border-top: 1px solid var(--border);
+        }
+        .footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-2);
+        }
+        .footer-left svg { width: 24px; height: 24px; }
+        .footer-right {
+            font-size: 0.8rem;
+            color: var(--text-3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .coming-soon-card { padding: 32px 24px; }
+            .footer .container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="nav-logo">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(8, 8)">
+                        <path d="M 0 40 L 24 24 L 0 8" stroke="#1565C0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+                        <path d="M 10 38 L 34 22 L 10 6" stroke="#1565C0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+                        <path d="M 20 36 L 44 20 L 20 4" stroke="#1565C0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+                <span>Compounding</span><span>Prompts</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="/#process">How It Works</a></li>
+                <li><a href="/blog/" style="color: var(--accent); font-weight: 600;">Blog</a></li>
+                <li><a href="/#contact" class="nav-cta">Free Consultation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== BLOG HEADER ===== -->
+    <section class="blog-header">
+        <div class="container">
+            <div class="blog-label">Blog</div>
+            <h1>AI insights for <span class="accent">growing businesses</span></h1>
+            <p>Practical guides, automation tips, and real-world case studies. No jargon, no fluff. Just what works.</p>
+        </div>
+    </section>
+
+    <!-- ===== COMING SOON ===== -->
+    <section class="coming-soon">
+        <div class="container">
+            <div class="coming-soon-card">
+                <div class="coming-soon-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+                </div>
+                <h2>Articles coming soon</h2>
+                <p>We're writing guides on the topics small businesses actually ask about. Real examples, real numbers, real results.</p>
+                <div class="coming-soon-topics">
+                    <span>AI Readiness</span>
+                    <span>Workflow Automation</span>
+                    <span>Cost Savings</span>
+                    <span>Data Analytics</span>
+                    <span>Custom Apps</span>
+                    <span>Financial Modeling</span>
+                    <span>Case Studies</span>
+                </div>
+                <a href="/#contact" class="btn btn-primary">Get Notified When We Publish</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-left">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(8, 8)">
+                        <path d="M 0 40 L 24 24 L 0 8" stroke="#1565C0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+                        <path d="M 10 38 L 34 22 L 10 6" stroke="#1565C0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+                        <path d="M 20 36 L 44 20 L 20 4" stroke="#1565C0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+                <span>Compounding Prompts</span>
+            </div>
+            <div class="footer-right">
+                &copy; 2026 Compounding Prompts. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
