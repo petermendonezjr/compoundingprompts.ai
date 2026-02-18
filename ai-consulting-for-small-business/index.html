@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Consulting for Small Business | Compounding Prompts</title>
+    <meta name="description" content="AI consulting for small business: workflow automation, custom AI apps, dashboards, and integrations. Production-grade results at SMB-friendly rates. Free 2-hour consultation.">
+    <meta name="keywords" content="AI consulting for small business, AI consulting SMB, AI automation small business, hire AI consultant, AI solutions for small business, AI readiness assessment">
+    <meta name="author" content="Compounding Prompts">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Consulting for Small Business | Compounding Prompts">
+    <meta property="og:description" content="Production-grade AI consulting for small-to-medium businesses. Workflow automation, custom apps, dashboards, and more. Free 2-hour consultation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://compoundingprompts.ai/ai-consulting-for-small-business/">
+    <meta property="og:image" content="https://compoundingprompts.ai/assets/og-default.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Consulting for Small Business | Compounding Prompts">
+    <meta name="twitter:description" content="Production-grade AI consulting for small-to-medium businesses. Free 2-hour consultation.">
+    <meta name="twitter:image" content="https://compoundingprompts.ai/assets/og-default.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://compoundingprompts.ai/ai-consulting-for-small-business/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema: Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI Consulting for Small Business",
+        "provider": {
+            "@type": "Organization",
+            "name": "Compounding Prompts",
+            "url": "https://compoundingprompts.ai"
+        },
+        "areaServed": { "@type": "Country", "name": "United States" },
+        "description": "AI consulting for small-to-medium businesses including readiness assessments, workflow automation, custom AI apps, dashboards, and API integrations."
+    }
+    </script>
+
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much does AI consulting cost for a small business?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We price for SMB budgets, not enterprise retainers. Every engagement starts with a free 2-hour consultation, then you receive a fixed-price proposal. No hourly billing. No surprises."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need AI for my small business?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If your team spends time on repetitive tasks — data entry, report generation, scheduling, customer follow-up — AI can likely save significant hours every week. Our free consultation identifies specific opportunities with no obligation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What do I own after an AI consulting project?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Everything. All code, documentation, and deliverables are yours. No vendor lock-in. No ongoing maintenance contracts required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does an AI consulting project take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most projects deliver results in 2–4 weeks. We scope every engagement with a clear timeline upfront. Larger platform builds may take longer, but we always start with a quick win."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://compoundingprompts.ai/" },
+            { "@type": "ListItem", "position": 2, "name": "AI Consulting for Small Business", "item": "https://compoundingprompts.ai/ai-consulting-for-small-business/" }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-base: #F7F5F0; --bg-surface: #FFFFFF; --bg-elevated: #EDF0F4;
+            --accent: #1565C0; --accent-light: #1976D2; --accent-dark: #0D47A1;
+            --accent-glow: rgba(21, 101, 192, 0.06); --accent-warm: #E8F0FE;
+            --secondary: #00897B; --text-1: #263238; --text-2: #546E7A; --text-3: #90A4AE;
+            --border: #C8CCD0; --ok: #10B981;
+            --radius-card: 12px; --radius-btn: 8px; --radius-pill: 9999px;
+            --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+            --shadow-elevated: 0 4px 12px rgba(0,0,0,0.08), 0 16px 48px rgba(0,0,0,0.06);
+            --transition: all 0.2s ease; --max-width: 1200px;
+            --font-heading: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-body); background: var(--bg-base); color: var(--text-2); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+        .accent { color: var(--accent); }
+        .section-label { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+        .section-title { font-family: var(--font-heading); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; color: var(--text-1); line-height: 1.2; margin-bottom: 16px; }
+        .section-subtitle { font-size: 1.1rem; color: var(--text-2); max-width: 640px; line-height: 1.6; }
+        body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.02; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); }
+
+        /* NAV */
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 0; background: rgba(247, 245, 240, 0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+        .nav .container { display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .nav-logo svg { width: 56px; height: 40px; flex-shrink: 0; }
+        .nav-logo-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
+        .nav-logo-wordmark span { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 650; letter-spacing: -0.2px; }
+        .nav-logo-wordmark .wm-top { color: #1b1f2a; }
+        .nav-logo-wordmark .wm-bot { color: #1f7aff; }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--text-2); transition: var(--transition); }
+        .nav-links a:hover { color: var(--text-1); }
+        .nav-cta { padding: 8px 20px; background: var(--accent); color: #FFFFFF !important; font-weight: 600 !important; border-radius: var(--radius-btn); transition: var(--transition); }
+        .nav-cta:hover { background: var(--accent-light) !important; }
+        .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+        .nav-toggle span { width: 24px; height: 2px; background: var(--text-1); transition: var(--transition); }
+
+        /* BREADCRUMB */
+        .breadcrumb { padding: 96px 0 0; }
+        .breadcrumb-inner { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--text-3); padding: 16px 0; }
+        .breadcrumb-inner a { color: var(--text-3); transition: var(--transition); }
+        .breadcrumb-inner a:hover { color: var(--accent); }
+        .breadcrumb-inner span { color: var(--text-2); }
+
+        /* PAGE HERO */
+        .page-hero { padding: 32px 0 96px; background: linear-gradient(135deg, var(--bg-base), var(--bg-surface)); position: relative; }
+        .page-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 40%, var(--accent-glow) 0%, transparent 60%); pointer-events: none; }
+        .page-hero .container { position: relative; z-index: 1; }
+        .page-hero-label { display: inline-block; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500; letter-spacing: 1.5px; color: var(--accent); padding: 6px 16px; border: 1px solid rgba(21, 101, 192, 0.25); border-radius: var(--radius-pill); margin-bottom: 24px; }
+        .page-hero h1 { font-family: var(--font-heading); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 600; color: var(--text-1); line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.5px; max-width: 800px; }
+        .page-hero-lead { font-size: 1.2rem; color: var(--text-2); line-height: 1.7; max-width: 680px; margin-bottom: 40px; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; border-radius: var(--radius-btn); border: none; cursor: pointer; transition: var(--transition); }
+        .btn-primary { background: var(--accent); color: #FFFFFF; }
+        .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+        .btn-secondary { background: transparent; color: var(--text-1); border: 1px solid var(--border); }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-warm); }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px; }
+        .hero-stats { display: flex; gap: 48px; padding-top: 32px; border-top: 1px solid var(--border); }
+        .hero-stat-value { font-family: var(--font-mono); font-size: 1.4rem; font-weight: 700; color: var(--secondary); }
+        .hero-stat-label { font-size: 0.8rem; color: var(--text-3); margin-top: 4px; }
+
+        /* CONTENT SECTIONS */
+        .content-section { padding: 96px 0; }
+        .content-section.alt { background: var(--bg-surface); }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+        .prose h2 { font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; color: var(--text-1); line-height: 1.25; margin-bottom: 16px; }
+        .prose p { font-size: 1rem; color: var(--text-2); line-height: 1.75; margin-bottom: 20px; }
+        .prose h3 { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 600; color: var(--text-1); margin-bottom: 8px; margin-top: 32px; }
+
+        /* PHASE CARDS */
+        .phase-grid { display: flex; flex-direction: column; gap: 20px; }
+        .phase-card { display: flex; gap: 20px; padding: 28px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-card); transition: var(--transition); }
+        .phase-card:hover { border-color: rgba(21,101,192,0.2); box-shadow: var(--shadow-card); }
+        .phase-num { flex-shrink: 0; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: rgba(21,101,192,0.08); border-radius: 10px; font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: var(--accent); }
+        .phase-card h3 { font-size: 1rem; font-weight: 700; color: var(--text-1); margin-bottom: 6px; }
+        .phase-card p { font-size: 0.875rem; color: var(--text-2); line-height: 1.6; margin: 0; }
+        .phase-card a { font-size: 0.8rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 4px; margin-top: 10px; }
+
+        /* SERVICE CLUSTER */
+        .service-cluster { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+        .cluster-card { padding: 24px; background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-card); transition: var(--transition); }
+        .cluster-card:hover { border-color: rgba(21,101,192,0.2); transform: translateY(-2px); box-shadow: var(--shadow-card); }
+        .cluster-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+        .cluster-card p { font-size: 0.825rem; color: var(--text-2); line-height: 1.5; margin-bottom: 14px; }
+        .cluster-link { font-size: 0.8rem; font-weight: 600; color: var(--accent); display: flex; align-items: center; gap: 4px; }
+
+        /* DIFFERENTIATORS */
+        .diff-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+        .diff-row { display: flex; gap: 14px; align-items: flex-start; }
+        .diff-icon { flex-shrink: 0; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: rgba(21,101,192,0.08); border-radius: 8px; color: var(--accent); }
+        .diff-row h4 { font-size: 0.95rem; font-weight: 700; color: var(--text-1); margin-bottom: 2px; }
+        .diff-row p { font-size: 0.85rem; color: var(--text-2); line-height: 1.5; }
+
+        /* FAQ */
+        .faq { padding: 96px 0; }
+        .faq-list { max-width: 720px; margin: 48px auto 0; }
+        .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+        .faq-question { width: 100%; background: none; border: none; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--text-1); transition: var(--transition); }
+        .faq-question:hover { color: var(--accent); }
+        .faq-chevron { flex-shrink: 0; width: 20px; height: 20px; transition: transform 0.3s ease; color: var(--text-3); }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-answer-inner { padding-top: 12px; font-size: 0.9rem; color: var(--text-2); line-height: 1.7; }
+        .faq-item.open .faq-answer { max-height: 300px; }
+
+        /* CTA BAND */
+        .cta-band { padding: 96px 0; text-align: center; position: relative; overflow: hidden; background: var(--bg-surface); }
+        .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, var(--accent-glow) 0%, transparent 60%); pointer-events: none; }
+        .cta-band .container { position: relative; z-index: 1; }
+        .cta-band h2 { font-family: var(--font-heading); font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 600; color: var(--text-1); margin-bottom: 16px; }
+        .cta-band p { font-size: 1.05rem; color: var(--text-2); max-width: 520px; margin: 0 auto 36px; }
+        .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* FOOTER */
+        .footer { padding: 48px 0 32px; border-top: 1px solid var(--border); }
+        .footer .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        .footer-left { display: flex; align-items: center; gap: 12px; }
+        .footer-left svg { width: 42px; height: 30px; }
+        .footer-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
+        .footer-wordmark span { font-family: var(--font-heading); font-size: 0.8rem; font-weight: 650; letter-spacing: -0.1px; }
+        .footer-wordmark .wm-top { color: #1b1f2a; }
+        .footer-wordmark .wm-bot { color: #1f7aff; }
+        .footer-right { font-size: 0.8rem; color: var(--text-3); }
+
+        /* ANIMATIONS */
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(247, 245, 240, 0.98); backdrop-filter: blur(12px); padding: 24px; gap: 20px; border-bottom: 1px solid var(--border); }
+            .nav-toggle { display: flex; }
+            .two-col { grid-template-columns: 1fr; gap: 48px; }
+            .service-cluster { grid-template-columns: 1fr 1fr; }
+            .hero-stats { flex-wrap: wrap; gap: 24px; }
+        }
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+            .hero-actions { flex-direction: column; }
+            .cta-actions { flex-direction: column; align-items: center; }
+            .service-cluster { grid-template-columns: 1fr; }
+            .footer .container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="container">
+            <a href="/" class="nav-logo">
+                <svg viewBox="24 40 112 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Compounding Prompts mark">
+                    <rect x="24" y="40" width="112" height="80" rx="16" ry="16" fill="none" stroke="rgba(31,122,255,0.26)" stroke-width="2"/>
+                    <rect x="32" y="46" width="96" height="68" rx="14" ry="14" fill="none" stroke="rgba(31,122,255,0.18)" stroke-width="2"/>
+                    <rect x="40" y="52" width="80" height="56" rx="12" ry="12" fill="none" stroke="rgba(31,122,255,0.12)" stroke-width="2"/>
+                    <polyline points="52,60 78,80 52,100" fill="none" stroke="rgba(31,122,255,0.55)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="47.2,60 73.2,80 47.2,100" fill="none" stroke="rgba(31,122,255,0.429)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="42.4,60 68.4,80 42.4,100" fill="none" stroke="rgba(31,122,255,0.308)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="nav-logo-wordmark">
+                    <span class="wm-top">Compounding</span>
+                    <span class="wm-bot">Prompts</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="/#process">How It Works</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/#contact" class="nav-cta">Free Consultation</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-inner">
+                <a href="/">Home</a>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                <span>AI Consulting for Small Business</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="page-hero-label">AI CONSULTING FOR SMALL BUSINESS</span>
+            <h1>AI consulting for small business — <span class="accent">production-grade results</span> at SMB-friendly rates</h1>
+            <p class="page-hero-lead">Compounding Prompts delivers real AI solutions — not slide decks — for small-to-medium businesses. Workflow automation, custom apps, dashboards, data analytics, and more. Every project builds on the last. Results compound.</p>
+            <div class="hero-actions">
+                <a href="/#contact" class="btn btn-primary">Book Free Consultation</a>
+                <a href="/services/" class="btn btn-secondary">Explore Services</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="hero-stat-value">Free</div>
+                    <div class="hero-stat-label">2-Hour Consultation</div>
+                </div>
+                <div>
+                    <div class="hero-stat-value">100%</div>
+                    <div class="hero-stat-label">Ownership — No Lock-In</div>
+                </div>
+                <div>
+                    <div class="hero-stat-value">Fixed</div>
+                    <div class="hero-stat-label">Price, No Surprises</div>
+                </div>
+                <div>
+                    <div class="hero-stat-value">US</div>
+                    <div class="hero-stat-label">Based &amp; Built</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT AI CONSULTING MEANS FOR SMBS -->
+    <section class="content-section">
+        <div class="container">
+            <div class="two-col">
+                <div class="prose reveal">
+                    <div class="section-label">What It Actually Means</div>
+                    <h2>AI consulting for SMBs is operational, not experimental</h2>
+                    <p>AI consulting for small business is no longer a luxury reserved for enterprise budgets. Companies that integrate AI into workflow automation, analytics, and decision support are reducing costs, increasing throughput, and building structural competitive advantage — at every size.</p>
+                    <p>The question is not whether to adopt AI. It's where to start, what to build, and who to trust to deliver it.</p>
+                    <p>Compounding Prompts occupies the gap between expensive enterprise consultancies ($200K+ engagements) and unreliable freelancers with no portfolio. We deliver production-grade work at SMB-friendly price points — and every project you own completely.</p>
+                    <h3>What AI consulting actually delivers for your business</h3>
+                    <p>For most small businesses, the highest-value AI applications are not complex. They are:</p>
+                    <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:8px;">
+                        <li style="display:flex;gap:10px;font-size:0.95rem;color:var(--text-2);line-height:1.6;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:3px"><polyline points="9 18 15 12 9 6"/></svg>Automating repetitive operational workflows that eat team hours</li>
+                        <li style="display:flex;gap:10px;font-size:0.95rem;color:var(--text-2);line-height:1.6;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:3px"><polyline points="9 18 15 12 9 6"/></svg>Turning scattered data into clear, actionable dashboards</li>
+                        <li style="display:flex;gap:10px;font-size:0.95rem;color:var(--text-2);line-height:1.6;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:3px"><polyline points="9 18 15 12 9 6"/></svg>Building internal AI tools aligned to your actual revenue and margin drivers</li>
+                        <li style="display:flex;gap:10px;font-size:0.95rem;color:var(--text-2);line-height:1.6;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:3px"><polyline points="9 18 15 12 9 6"/></svg>Connecting your existing tools with AI capabilities through API integrations</li>
+                        <li style="display:flex;gap:10px;font-size:0.95rem;color:var(--text-2);line-height:1.6;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:3px"><polyline points="9 18 15 12 9 6"/></svg>Creating durable infrastructure for future AI capabilities as your business scales</li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="section-label">Our AI Adoption Framework</div>
+                    <h2 class="section-title" style="font-size:1.5rem;">Three phases. Built to compound.</h2>
+                    <div class="phase-grid">
+                        <div class="phase-card">
+                            <div class="phase-num">01</div>
+                            <div>
+                                <h3>AI Readiness Assessment</h3>
+                                <p>Map your workflows, identify high-impact automation opportunities, and receive a prioritized 90-day roadmap. The foundation for everything that follows.</p>
+                                <a href="/services/ai-readiness/">Learn about AI Readiness →</a>
+                            </div>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-num">02</div>
+                            <div>
+                                <h3>Workflow Automation</h3>
+                                <p>Eliminate the repetitive tasks eating your team's time. We design and implement AI-powered workflows that run without ongoing intervention.</p>
+                                <a href="/services/workflow-automation/">Learn about Automation →</a>
+                            </div>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-num">03</div>
+                            <div>
+                                <h3>Custom AI Applications</h3>
+                                <p>Build the tools your business actually needs — from internal dashboards to customer-facing AI products. Production-grade. Fully owned.</p>
+                                <a href="/services/custom-ai-apps/">Learn about Custom Apps →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE CLUSTER -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-label">Full Service Range</div>
+                <h2 class="section-title">Every AI service an SMB needs</h2>
+                <p class="section-subtitle">From first assessment to production deployment — all fixed-price, all US-based, all yours to own.</p>
+            </div>
+            <div class="service-cluster">
+                <a href="/services/ai-readiness/" class="cluster-card reveal">
+                    <h3>AI Readiness Assessment</h3>
+                    <p>Workflow audit, tool stack analysis, and 90-day AI roadmap for your business.</p>
+                    <span class="cluster-link">Explore →</span>
+                </a>
+                <a href="/services/workflow-automation/" class="cluster-card reveal">
+                    <h3>Workflow Automation</h3>
+                    <p>AI-powered workflows that eliminate repetitive tasks and save your team hours every week.</p>
+                    <span class="cluster-link">Explore →</span>
+                </a>
+                <a href="/services/custom-ai-apps/" class="cluster-card reveal">
+                    <h3>Custom AI Applications</h3>
+                    <p>Bespoke AI software built for your exact needs — internal tools to customer-facing products.</p>
+                    <span class="cluster-link">Explore →</span>
+                </a>
+                <a href="/services/api-integrations/" class="cluster-card reveal">
+                    <h3>API Integrations</h3>
+                    <p>Connect your CRM, ERP, and third-party services with AI capabilities in unified workflows.</p>
+                    <span class="cluster-link">Explore →</span>
+                </a>
+                <a href="/services/dashboards-analytics/" class="cluster-card reveal">
+                    <h3>Dashboards &amp; Analytics</h3>
+                    <p>Real-time analytics and reporting that turns scattered data into clear business decisions.</p>
+                    <span class="cluster-link">Explore →</span>
+                </a>
+                <a href="/services/data-analytics-consulting/" class="cluster-card reveal">
+                    <h3>Data Analytics Consulting</h3>
+                    <p>Pipelines, models, and visualizations built to surface insight from your raw data.</p>
+                    <span class="cluster-link">Explore →</span>
+                </a>
+                <a href="/services/pmo-systems/" class="cluster-card reveal">
+                    <h3>PMO System Design</h3>
+                    <p>Portfolio dashboards and operations frameworks that bring structure to growing teams.</p>
+                    <span class="cluster-link">Explore →</span>
+                </a>
+                <a href="/services/websites-web-apps/" class="cluster-card reveal">
+                    <h3>Website &amp; Web App Development</h3>
+                    <p>Full-stack web applications and marketing sites built to convert and scale.</p>
+                    <span class="cluster-link">Explore →</span>
+                </a>
+                <a href="/services/recruiter-career-tools/" class="cluster-card reveal">
+                    <h3>Recruiter &amp; Career Tools</h3>
+                    <p>AI-powered job matching, CV generation, and application intelligence for hiring teams.</p>
+                    <span class="cluster-link">Explore →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY COMPOUNDING PROMPTS -->
+    <section class="content-section">
+        <div class="container">
+            <div class="reveal" style="margin-bottom:48px;">
+                <div class="section-label">Why Compounding Prompts</div>
+                <h2 class="section-title">Built different from every other option</h2>
+                <p class="section-subtitle">Not an enterprise consultancy. Not a freelancer. The gap between the two — at the price point SMBs can actually work with.</p>
+            </div>
+            <div class="two-col">
+                <div class="diff-list">
+                    <div class="diff-row reveal">
+                        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                        <div>
+                            <h4>Production-grade, not prototypes</h4>
+                            <p>Every deliverable is built to deploy — real code, real infrastructure, real results. Not a slide deck, not a proof of concept.</p>
+                        </div>
+                    </div>
+                    <div class="diff-row reveal">
+                        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg></div>
+                        <div>
+                            <h4>You own everything</h4>
+                            <p>All code, designs, and documentation are yours outright. No ongoing fees. No vendor lock-in. Walk away with everything, ready to run.</p>
+                        </div>
+                    </div>
+                    <div class="diff-row reveal">
+                        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                        <div>
+                            <h4>Fixed pricing, defined scope</h4>
+                            <p>Every project has a clear scope and total cost before we start. No hourly billing. No scope creep. No surprises on the invoice.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="diff-list">
+                    <div class="diff-row reveal">
+                        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                        <div>
+                            <h4>100% US-based</h4>
+                            <p>Same timezone. Direct communication. No offshore handoffs. We're reachable when you need us and accountable for what we deliver.</p>
+                        </div>
+                    </div>
+                    <div class="diff-row reveal">
+                        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
+                        <div>
+                            <h4>Plain English, no jargon</h4>
+                            <p>We explain what we're building and why in language anyone can follow. No buzzwords. No inflated complexity. Just clear outcomes.</p>
+                        </div>
+                    </div>
+                    <div class="diff-row reveal">
+                        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M23 6l-13.5 13.5L4 14"/></svg></div>
+                        <div>
+                            <h4>Free 2-hour consultation</h4>
+                            <p>No commitment. No pressure. We review your materials in advance and come back with specific, actionable recommendations — before you spend a dollar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-label reveal">FAQ</div>
+            <h2 class="section-title reveal">Common questions about AI consulting for small business</h2>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question">How much does AI consulting cost for a small business?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">We price for SMB budgets, not enterprise retainers. Every engagement starts with a free 2-hour consultation, then you receive a fixed-price proposal with clear deliverables and a timeline. No hourly billing. No surprises.</div></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">Do I need AI for my small business?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">If your team spends time on repetitive tasks — data entry, report generation, scheduling, customer follow-up — AI can likely save significant hours every week. Our free consultation identifies specific opportunities with no obligation to proceed.</div></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">What do I own after an AI consulting project?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Everything. All code, designs, documentation, and deliverables are yours. No vendor lock-in and no ongoing maintenance contracts required. You can take the work to any developer or run it yourself.</div></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">How long does an AI consulting project take?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Most projects deliver results in 2–4 weeks. We scope every engagement with a clear timeline upfront. Larger platform builds may take longer, but we always start with a quick win so you see value fast.</div></div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question">Where do I start if I've never used AI consulting before?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Start with our AI Readiness Assessment. It's designed as a low-cost, low-risk entry point that gives you a clear picture of where AI creates the most value for your specific business — before committing to a larger build.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-band">
+        <div class="container">
+            <h2>Start compounding your results</h2>
+            <p>Book a free 2-hour consultation. We'll learn about your business and come back with specific, actionable AI recommendations — no commitment required.</p>
+            <div class="cta-actions">
+                <a href="/#contact" class="btn btn-primary">Book Free Consultation</a>
+                <a href="/services/ai-readiness/" class="btn btn-secondary">Start with AI Readiness</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-left">
+                <svg viewBox="24 40 112 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Compounding Prompts mark">
+                    <rect x="24" y="40" width="112" height="80" rx="16" ry="16" fill="none" stroke="rgba(31,122,255,0.26)" stroke-width="2"/>
+                    <rect x="32" y="46" width="96" height="68" rx="14" ry="14" fill="none" stroke="rgba(31,122,255,0.18)" stroke-width="2"/>
+                    <rect x="40" y="52" width="80" height="56" rx="12" ry="12" fill="none" stroke="rgba(31,122,255,0.12)" stroke-width="2"/>
+                    <polyline points="52,60 78,80 52,100" fill="none" stroke="rgba(31,122,255,0.55)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="47.2,60 73.2,80 47.2,100" fill="none" stroke="rgba(31,122,255,0.429)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="42.4,60 68.4,80 42.4,100" fill="none" stroke="rgba(31,122,255,0.308)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="footer-wordmark">
+                    <span class="wm-top">Compounding</span>
+                    <span class="wm-bot">Prompts</span>
+                </div>
+            </div>
+            <div class="footer-right">&copy; 2026 Compounding Prompts. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const wasOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!wasOpen) item.classList.add('open');
+            });
+        });
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>

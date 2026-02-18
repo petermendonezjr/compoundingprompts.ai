@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Recruiting and Career Platform Tools | Compounding Prompts</title>
+  <meta name="description" content="We build AI-powered tools for resume optimization, candidate scoring, and job matching for recruiters and career platforms." />
+  <link rel="canonical" href="https://compoundingprompts.ai/services/recruiter-career-tools/" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does a recruiting AI tool take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most recruiting AI tools are delivered in 2–5 weeks depending on complexity, integrations required, and the number of features in scope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do we own the recruiting tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You receive full ownership of all code, models, and assets delivered. There are no licensing fees or vendor lock-in."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pricing fixed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide a fixed-price quote before any work begins so you know exactly what you are getting and what it costs."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://compoundingprompts.ai/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://compoundingprompts.ai/services/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Recruiting Tools",
+        "item": "https://compoundingprompts.ai/services/recruiter-career-tools/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── Brand Tokens ── */
+    :root {
+      --bg-base:        #F7F5F0;
+      --bg-surface:     #FFFFFF;
+      --bg-dark:        #0D1117;
+      --accent:         #1565C0;
+      --accent-light:   #1976D2;
+      --accent-dark:    #0D47A1;
+      --accent-muted:   #E3EEFA;
+      --text-primary:   #0D1117;
+      --text-secondary: #4A5568;
+      --text-muted:     #718096;
+      --border:         #E2E8F0;
+      --border-dark:    #CBD5E0;
+      --radius-sm:      6px;
+      --radius-md:      12px;
+      --radius-lg:      20px;
+      --shadow-sm:      0 1px 3px rgba(0,0,0,.08);
+      --shadow-md:      0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg:      0 12px 40px rgba(0,0,0,.14);
+      --font-head:      'Sora', sans-serif;
+      --font-body:      'Inter', sans-serif;
+      --font-mono:      'JetBrains Mono', monospace;
+      --nav-h:          68px;
+      --max-w:          1140px;
+      --transition:     0.22s ease;
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-base);
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; }
+    ul { list-style: none; }
+
+    /* ── Layout Helpers ── */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(247,245,240,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .nav__logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav__logo svg { width: 56px; height: 40px; flex-shrink: 0; }
+    .nav__logo-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
+    .nav__logo-wordmark span { font-family: var(--font-head); font-size: 0.95rem; font-weight: 650; letter-spacing: -0.2px; }
+    .nav__logo-wordmark .wm-top { color: #1b1f2a; }
+    .nav__logo-wordmark .wm-bot { color: #1f7aff; }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav__links a {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .nav__links a:hover,
+    .nav__links a.active { color: var(--accent); }
+    .nav__links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .nav__cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: .875rem;
+      border-radius: var(--radius-sm);
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition), box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+      border: 2px solid transparent;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      border-color: var(--accent-dark);
+      box-shadow: 0 4px 14px rgba(21,101,192,.35);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent);
+      border-color: var(--border-dark);
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      background: var(--accent-muted);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      border-color: rgba(255,255,255,0.3);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .nav__hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav__hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px 24px;
+      z-index: 999;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: var(--shadow-md);
+    }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a {
+      font-size: .95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav__mobile a:last-child { border-bottom: none; }
+    .nav__mobile a.active,
+    .nav__mobile a:hover { color: var(--accent); }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      margin-top: var(--nav-h);
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-surface);
+    }
+    .breadcrumb__list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .82rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+    .breadcrumb__list a {
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+    .breadcrumb__list a:hover { color: var(--accent); }
+    .breadcrumb__list .sep {
+      color: var(--border-dark);
+      font-size: .75rem;
+    }
+    .breadcrumb__list .current {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 72px 0 80px;
+      background: var(--bg-base);
+    }
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .hero__label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-muted);
+      border: 1px solid rgba(21,101,192,.18);
+      border-radius: 4px;
+      padding: 5px 12px;
+      margin-bottom: 20px;
+    }
+    .hero__h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 800;
+      line-height: 1.18;
+      letter-spacing: -.02em;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+    .hero__h1 .accent { color: var(--accent); }
+    .hero__p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+    .hero__actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Hero right card */
+    .hero__card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero__card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    }
+    .hero__card-label {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .hero__card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .hero__card-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: .9rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .hero__card-item .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ── CONTENT SECTION ── */
+    .content-section {
+      padding: 88px 0;
+      background: var(--bg-surface);
+    }
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    .section-h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -.02em;
+      color: var(--text-primary);
+      margin-bottom: 28px;
+    }
+
+    /* Feature list */
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .feature-item:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px rgba(21,101,192,.10);
+    }
+    .feature-icon {
+      width: 34px;
+      height: 34px;
+      background: var(--accent-muted);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .feature-icon svg { color: var(--accent); }
+    .feature-text {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.45;
+      padding-top: 6px;
+    }
+
+    /* Process steps */
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .process-step {
+      display: flex;
+      gap: 18px;
+      position: relative;
+    }
+    .process-step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 44px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+    .step-num {
+      width: 38px;
+      height: 38px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      font-weight: 500;
+      flex-shrink: 0;
+      z-index: 1;
+      position: relative;
+    }
+    .step-body {
+      padding-bottom: 32px;
+    }
+    .step-body strong {
+      display: block;
+      font-family: var(--font-head);
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      padding-top: 8px;
+    }
+    .step-body p {
+      font-size: .85rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* ── FAQ ── */
+    .faq-section {
+      padding: 88px 0;
+      background: var(--bg-base);
+    }
+    .faq-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: border-color var(--transition);
+    }
+    .faq-item.open { border-color: var(--accent); }
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 24px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--text-primary);
+      user-select: none;
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      transition: transform var(--transition);
+      color: var(--text-muted);
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--accent); }
+    .faq-a {
+      display: none;
+      padding: 0 24px 20px;
+      font-size: .9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── CTA BAND ── */
+    .cta-band {
+      padding: 80px 0;
+      background: var(--bg-dark);
+      text-align: center;
+    }
+    .cta-band__label {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 16px;
+    }
+    .cta-band__h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 36px;
+      line-height: 1.2;
+    }
+    .cta-band__actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── RELATED CARDS ── */
+    .related-section {
+      padding: 88px 0;
+      background: var(--bg-surface);
+    }
+    .related-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .related-card {
+      background: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .related-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .related-card__icon {
+      width: 42px;
+      height: 42px;
+      background: var(--accent-muted);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4px;
+    }
+    .related-card__title {
+      font-family: var(--font-head);
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .related-card:hover .related-card__title { color: var(--accent); }
+    .related-card__desc {
+      font-size: .82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .related-card__arrow {
+      margin-top: auto;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--bg-dark);
+      padding: 48px 0 32px;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer__logo { display: flex; align-items: center; gap: 12px; }
+    .footer__logo svg { width: 42px; height: 30px; }
+    .footer__logo-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
+    .footer__logo-wordmark span { font-family: var(--font-head); font-size: 0.8rem; font-weight: 650; letter-spacing: -0.1px; }
+    .footer__logo-wordmark .wm-top { color: #1b1f2a; }
+    .footer__logo-wordmark .wm-bot { color: #1f7aff; }
+    .footer__links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer__links a {
+      font-size: .82rem;
+      color: rgba(255,255,255,.4);
+      transition: color var(--transition);
+    }
+    .footer__links a:hover { color: rgba(255,255,255,.75); }
+    .footer__copy {
+      font-size: .78rem;
+      color: rgba(255,255,255,.28);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero__grid,
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero__card { order: -1; }
+      .nav__links,
+      .nav__cta { display: none; }
+      .nav__hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 48px 0 60px; }
+      .hero__actions { flex-direction: column; }
+      .cta-band__actions { flex-direction: column; align-items: center; }
+      .related-grid { grid-template-columns: 1fr; }
+      .content-section,
+      .faq-section,
+      .related-section { padding: 60px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+
+      <!-- Logo -->
+      <a href="/" class="nav__logo" aria-label="Compounding Prompts home">
+        <svg viewBox="24 40 112 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Compounding Prompts mark">
+            <rect x="24" y="40" width="112" height="80" rx="16" ry="16" fill="none" stroke="rgba(31,122,255,0.26)" stroke-width="2"/>
+            <rect x="32" y="46" width="96" height="68" rx="14" ry="14" fill="none" stroke="rgba(31,122,255,0.18)" stroke-width="2"/>
+            <rect x="40" y="52" width="80" height="56" rx="12" ry="12" fill="none" stroke="rgba(31,122,255,0.12)" stroke-width="2"/>
+            <polyline points="52,60 78,80 52,100" fill="none" stroke="rgba(31,122,255,0.55)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="47.2,60 73.2,80 47.2,100" fill="none" stroke="rgba(31,122,255,0.429)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="42.4,60 68.4,80 42.4,100" fill="none" stroke="rgba(31,122,255,0.308)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="nav__logo-wordmark">
+            <span class="wm-top">Compounding</span>
+            <span class="wm-bot">Prompts</span>
+        </div>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/" class="active">Services</a></li>
+        <li><a href="/#process">Process</a></li>
+        <li><a href="/#about">About</a></li>
+      </ul>
+
+      <!-- Desktop CTA -->
+      <div class="nav__cta">
+        <a href="/#contact" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav class="nav__mobile" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/services/" class="active">Services</a>
+      <a href="/#process">Process</a>
+      <a href="/#about">About</a>
+      <a href="/#contact" class="btn btn-primary" style="text-align:center;margin-top:8px;">Get Started</a>
+    </nav>
+  </nav>
+
+  <!-- ── BREADCRUMB ── -->
+  <div class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb__list" role="list">
+        <li><a href="/">Home</a></li>
+        <li class="sep" aria-hidden="true">/</li>
+        <li><a href="/services/">Services</a></li>
+        <li class="sep" aria-hidden="true">/</li>
+        <li class="current" aria-current="page">AI Recruiting &amp; Career Tools</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero" aria-labelledby="hero-h1">
+    <div class="container">
+      <div class="hero__grid">
+
+        <!-- Left -->
+        <div class="reveal">
+          <div class="hero__label">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <circle cx="6" cy="6" r="5" stroke="#1565C0" stroke-width="1.5"/>
+              <circle cx="6" cy="6" r="2" fill="#1565C0"/>
+            </svg>
+            Recruiting &amp; Career Tools
+          </div>
+          <h1 class="hero__h1" id="hero-h1">
+            AI Tools for Recruiters and <span class="accent">Career Platforms</span>
+          </h1>
+          <p class="hero__p">
+            We build AI-powered tools for resume optimization, candidate scoring, and job matching. Purpose-built for recruiting teams and career platforms.
+          </p>
+          <div class="hero__actions">
+            <a href="/#contact" class="btn btn-primary">Build Your Recruiting Tool</a>
+            <a href="/services/" class="btn btn-secondary">All Services</a>
+          </div>
+        </div>
+
+        <!-- Right card -->
+        <div class="reveal" style="transition-delay:.12s">
+          <div class="hero__card">
+            <div class="hero__card-label">Features</div>
+            <ul class="hero__card-list" role="list">
+              <li class="hero__card-item">
+                <span class="dot" aria-hidden="true"></span>
+                Resume AI scoring
+              </li>
+              <li class="hero__card-item">
+                <span class="dot" aria-hidden="true"></span>
+                Candidate ranking
+              </li>
+              <li class="hero__card-item">
+                <span class="dot" aria-hidden="true"></span>
+                Job matching algorithms
+              </li>
+              <li class="hero__card-item">
+                <span class="dot" aria-hidden="true"></span>
+                Recruiter dashboards
+              </li>
+              <li class="hero__card-item">
+                <span class="dot" aria-hidden="true"></span>
+                Application intelligence
+              </li>
+              <li class="hero__card-item">
+                <span class="dot" aria-hidden="true"></span>
+                Bulk processing pipelines
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTENT SECTION ── -->
+  <section class="content-section" aria-labelledby="content-h2">
+    <div class="container">
+      <div class="content-grid">
+
+        <!-- Left: What We Build -->
+        <div class="reveal">
+          <div class="section-label">What We Build</div>
+          <h2 class="section-h2" id="content-h2">Tools designed for modern recruiting</h2>
+          <ul class="feature-list" role="list">
+
+            <li class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              <span class="feature-text">Resume scoring and optimization tools</span>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <polyline points="23 11 17 11 20 8"/>
+                  <polyline points="23 11 17 11 20 14"/>
+                </svg>
+              </div>
+              <span class="feature-text">Candidate ranking systems</span>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/>
+                  <line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              </div>
+              <span class="feature-text">Job matching algorithms</span>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M3 9h18"/>
+                  <path d="M9 21V9"/>
+                </svg>
+              </div>
+              <span class="feature-text">Recruiter dashboards</span>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <span class="feature-text">Application tracking automation</span>
+            </li>
+
+            <li class="feature-item">
+              <div class="feature-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2"/>
+                  <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                  <line x1="12" y1="12" x2="12" y2="16"/>
+                  <line x1="10" y1="14" x2="14" y2="14"/>
+                </svg>
+              </div>
+              <span class="feature-text">Bulk resume processing pipelines</span>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Right: Process -->
+        <div class="reveal" style="transition-delay:.1s">
+          <div class="section-label">Our Process</div>
+          <h2 class="section-h2">From brief to deployment</h2>
+          <ol class="process-steps" role="list">
+
+            <li class="process-step">
+              <div class="step-num" aria-hidden="true">01</div>
+              <div class="step-body">
+                <strong>Requirements Mapping</strong>
+                <p>We map your recruiting workflow, define scoring criteria, and align on integration points before writing a line of code.</p>
+              </div>
+            </li>
+
+            <li class="process-step">
+              <div class="step-num" aria-hidden="true">02</div>
+              <div class="step-body">
+                <strong>Algorithm Design</strong>
+                <p>We design the AI logic — scoring models, ranking heuristics, and matching engines — tailored to your specific talent criteria.</p>
+              </div>
+            </li>
+
+            <li class="process-step">
+              <div class="step-num" aria-hidden="true">03</div>
+              <div class="step-body">
+                <strong>Build &amp; Integrate</strong>
+                <p>We build the tool and connect it to your existing systems — ATS, HRIS, or custom platforms — via clean API interfaces.</p>
+              </div>
+            </li>
+
+            <li class="process-step">
+              <div class="step-num" aria-hidden="true">04</div>
+              <div class="step-body">
+                <strong>Test &amp; Validate</strong>
+                <p>We run the tool against real candidate data, tune scoring accuracy, and validate outcomes with your recruiting team.</p>
+              </div>
+            </li>
+
+            <li class="process-step">
+              <div class="step-num" aria-hidden="true">05</div>
+              <div class="step-body">
+                <strong>Deploy &amp; Train</strong>
+                <p>We deploy to your environment, hand over full ownership of the codebase, and train your team to use and maintain it.</p>
+              </div>
+            </li>
+
+          </ol>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="faq-section" aria-labelledby="faq-h2">
+    <div class="container">
+      <div class="faq-header reveal">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-h2" id="faq-h2">Common questions</h2>
+      </div>
+
+      <div class="faq-list" role="list">
+
+        <div class="faq-item reveal" role="listitem">
+          <button class="faq-q" aria-expanded="false">
+            How long does a recruiting AI tool take?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-a" role="region">
+            Most recruiting AI tools are delivered in 2–5 weeks depending on complexity, integrations required, and the number of features in scope. We scope the timeline clearly before any work begins.
+          </div>
+        </div>
+
+        <div class="faq-item reveal" style="transition-delay:.06s" role="listitem">
+          <button class="faq-q" aria-expanded="false">
+            Do we own the recruiting tool?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-a" role="region">
+            Yes. You receive full ownership of all code, models, and assets delivered. There are no licensing fees, ongoing platform costs, or vendor lock-in. The tool is yours to run, modify, and extend as you see fit.
+          </div>
+        </div>
+
+        <div class="faq-item reveal" style="transition-delay:.12s" role="listitem">
+          <button class="faq-q" aria-expanded="false">
+            Can it integrate with our ATS?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          <div class="faq-a" role="region">
+            Yes. Our recruiting tools integrate with major ATS platforms — including Greenhouse, Lever, Workday, iCIMS, and others — via API. If your ATS has an API, we can connect to it. Custom integrations are scoped as part of the initial requirements mapping.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BAND ── -->
+  <section class="cta-band" aria-labelledby="cta-h2">
+    <div class="container">
+      <div class="cta-band__label">Ready to build?</div>
+      <h2 class="cta-band__h2" id="cta-h2">Build smarter recruiting with AI</h2>
+      <div class="cta-band__actions">
+        <a href="/#contact" class="btn btn-primary">Build Your Recruiting Tool</a>
+        <a href="/services/custom-ai-apps/" class="btn btn-ghost">Explore Custom AI Apps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RELATED CARDS ── -->
+  <section class="related-section" aria-labelledby="related-h2">
+    <div class="container">
+      <div class="related-header reveal">
+        <div class="section-label">Explore More</div>
+        <h2 class="section-h2" id="related-h2">Related services</h2>
+      </div>
+
+      <div class="related-grid">
+
+        <a href="/services/custom-ai-apps/" class="related-card reveal" aria-label="Custom AI Apps service page">
+          <div class="related-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <div class="related-card__title">Custom AI Apps</div>
+          <div class="related-card__desc">Bespoke AI applications built to your exact spec and delivered with full ownership.</div>
+          <div class="related-card__arrow">Learn more <span aria-hidden="true">&#8594;</span></div>
+        </a>
+
+        <a href="/services/api-integrations/" class="related-card reveal" style="transition-delay:.06s" aria-label="API Integrations service page">
+          <div class="related-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 9l-3 3 3 3M16 9l3 3-3 3M12 4v16"/>
+            </svg>
+          </div>
+          <div class="related-card__title">API Integrations</div>
+          <div class="related-card__desc">Connect your recruiting stack to AI services, data pipelines, and third-party platforms.</div>
+          <div class="related-card__arrow">Learn more <span aria-hidden="true">&#8594;</span></div>
+        </a>
+
+        <a href="/services/" class="related-card reveal" style="transition-delay:.12s" aria-label="All AI Consulting Services">
+          <div class="related-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <div class="related-card__title">All AI Consulting Services</div>
+          <div class="related-card__desc">View the full range of AI consulting and build services we offer across industries.</div>
+          <div class="related-card__arrow">See all services <span aria-hidden="true">&#8594;</span></div>
+        </a>
+
+        <a href="/#process" class="related-card reveal" style="transition-delay:.18s" aria-label="AI Implementation Process">
+          <div class="related-card__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1565C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div class="related-card__title">AI Implementation Process</div>
+          <div class="related-card__desc">How we scope, build, and deliver AI tools from first call to production deployment.</div>
+          <div class="related-card__arrow">See our process <span aria-hidden="true">&#8594;</span></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <a href="/" class="footer__logo" aria-label="Compounding Prompts home">
+          <svg viewBox="24 40 112 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Compounding Prompts mark">
+              <rect x="24" y="40" width="112" height="80" rx="16" ry="16" fill="none" stroke="rgba(31,122,255,0.26)" stroke-width="2"/>
+              <rect x="32" y="46" width="96" height="68" rx="14" ry="14" fill="none" stroke="rgba(31,122,255,0.18)" stroke-width="2"/>
+              <rect x="40" y="52" width="80" height="56" rx="12" ry="12" fill="none" stroke="rgba(31,122,255,0.12)" stroke-width="2"/>
+              <polyline points="52,60 78,80 52,100" fill="none" stroke="rgba(31,122,255,0.55)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="47.2,60 73.2,80 47.2,100" fill="none" stroke="rgba(31,122,255,0.429)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="42.4,60 68.4,80 42.4,100" fill="none" stroke="rgba(31,122,255,0.308)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="footer__logo-wordmark">
+              <span class="wm-top">Compounding</span>
+              <span class="wm-bot">Prompts</span>
+          </div>
+        </a>
+
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="/">Home</a>
+          <a href="/services/">Services</a>
+          <a href="/#process">Process</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+
+        <p class="footer__copy">&copy; 2026 Compounding Prompts. All rights reserved.</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── JAVASCRIPT ── -->
+  <script>
+    // Nav toggle
+    (function () {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (!hamburger || !mobileMenu) return;
+
+      hamburger.addEventListener('click', function () {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        // Animate hamburger spans
+        const spans = hamburger.querySelectorAll('span');
+        if (isOpen) {
+          spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+          spans[1].style.opacity = '0';
+          spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+        } else {
+          spans[0].style.transform = '';
+          spans[1].style.opacity = '';
+          spans[2].style.transform = '';
+        }
+      });
+
+      // Close on outside click
+      document.addEventListener('click', function (e) {
+        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.querySelectorAll('span').forEach(function (s) {
+            s.style.transform = '';
+            s.style.opacity = '';
+          });
+        }
+      });
+    })();
+
+    // FAQ accordion
+    (function () {
+      document.querySelectorAll('.faq-q').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var item = btn.closest('.faq-item');
+          var isOpen = item.classList.contains('open');
+
+          // Close all
+          document.querySelectorAll('.faq-item').forEach(function (el) {
+            el.classList.remove('open');
+            el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          });
+
+          // Open clicked if it was closed
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+
+    // Reveal on scroll
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      els.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+
+</body>
+</html>

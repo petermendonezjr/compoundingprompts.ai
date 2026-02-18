@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Consulting for SMBs | Compounding Prompts</title>
+    <meta name="description" content="We design data pipelines, build forecasting models, and automate reporting systems. Turn your data into strategic decisions.">
+    <meta name="keywords" content="data analytics consulting, data pipeline, forecasting models, KPI automation, data governance, SMB analytics, business intelligence">
+    <meta name="author" content="Compounding Prompts">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Data Analytics Consulting for SMBs | Compounding Prompts">
+    <meta property="og:description" content="We design data pipelines, build forecasting models, and automate reporting systems. Turn your data into strategic decisions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://compoundingprompts.ai/services/data-analytics-consulting/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Data Analytics Consulting for SMBs | Compounding Prompts">
+    <meta name="twitter:description" content="We design data pipelines, build forecasting models, and automate reporting systems. Turn your data into strategic decisions.">
+    <link rel="canonical" href="https://compoundingprompts.ai/services/data-analytics-consulting/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How long does a data analytics engagement take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most data analytics engagements run 3 to 6 weeks depending on data complexity and scope. We begin with a data audit and deliver a working pipeline, models, and automated reporting by the end of the engagement."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do we own the pipelines and models you build?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, full ownership. Every pipeline, model, dashboard, and data asset we build is yours. We document everything and hand it off cleanly so your team can operate and extend it independently."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is pricing fixed or hourly?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we work on fixed-price engagements. You know the full cost before we start. No surprise invoices, no hourly billing."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://compoundingprompts.ai/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://compoundingprompts.ai/services/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Data Analytics Consulting",
+                "item": "https://compoundingprompts.ai/services/data-analytics-consulting/"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ============================================================
+           CSS CUSTOM PROPERTIES
+        ============================================================ */
+        :root {
+            --bg-base:        #F7F5F0;
+            --bg-surface:     #EFEDE8;
+            --bg-elevated:    #E8E5DE;
+            --text-primary:   #1A1A1A;
+            --text-secondary: #4A4A4A;
+            --text-muted:     #6B6B6B;
+            --accent:         #1565C0;
+            --accent-hover:   #0D47A1;
+            --accent-light:   #E3F2FD;
+            --accent-mid:     #90CAF9;
+            --border:         #D8D5CE;
+            --border-light:   #E8E5DE;
+            --shadow-sm:      0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md:      0 4px 12px rgba(0,0,0,0.10);
+            --shadow-lg:      0 8px 32px rgba(0,0,0,0.12);
+            --radius-sm:      4px;
+            --radius-md:      8px;
+            --radius-lg:      16px;
+            --radius-xl:      24px;
+            --font-display:   'Sora', sans-serif;
+            --font-body:      'Inter', sans-serif;
+            --font-mono:      'JetBrains Mono', monospace;
+            --transition:     0.2s ease;
+            --max-width:      1200px;
+            --nav-height:     72px;
+        }
+
+        /* ============================================================
+           RESET & BASE
+        ============================================================ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+
+        /* ============================================================
+           NAVIGATION
+        ============================================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            background: rgba(247, 245, 240, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .nav-logo svg { width: 56px; height: 40px; flex-shrink: 0; }
+        .nav-logo-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
+        .nav-logo-wordmark span { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 650; letter-spacing: -0.2px; }
+        .nav-logo-wordmark .wm-top { color: #1b1f2a; }
+        .nav-logo-wordmark .wm-bot { color: #1f7aff; }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            transition: color var(--transition), background var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all var(--transition);
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 1.5px solid var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-light);
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1.5px solid var(--border);
+        }
+
+        .btn-ghost:hover {
+            background: var(--bg-surface);
+            color: var(--text-primary);
+        }
+
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .nav-hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+            transition: all var(--transition);
+        }
+
+        .nav-mobile {
+            display: none;
+            position: fixed;
+            top: var(--nav-height);
+            left: 0;
+            right: 0;
+            background: var(--bg-base);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px 24px;
+            z-index: 999;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .nav-mobile.open { display: flex; }
+
+        .nav-mobile a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            transition: all var(--transition);
+        }
+
+        .nav-mobile a:hover,
+        .nav-mobile a.active {
+            color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .nav-mobile-cta {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* ============================================================
+           PAGE WRAPPER
+        ============================================================ */
+        .page-wrapper {
+            padding-top: var(--nav-height);
+        }
+
+        /* ============================================================
+           BREADCRUMB
+        ============================================================ */
+        .breadcrumb {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 16px 24px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            transition: color var(--transition);
+        }
+
+        .breadcrumb a:hover { color: var(--accent); }
+
+        .breadcrumb-sep { opacity: 0.4; }
+
+        .breadcrumb-current { color: var(--accent); font-weight: 500; }
+
+        /* ============================================================
+           HERO
+        ============================================================ */
+        .hero {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 56px 24px 64px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: var(--accent-light);
+            border: 1px solid var(--accent-mid);
+            padding: 5px 12px;
+            border-radius: 100px;
+            margin-bottom: 20px;
+        }
+
+        .hero-label::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+
+        .hero-title .accent { color: var(--accent); }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 520px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* Hero right card */
+        .hero-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 36px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-card-title {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .capability-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .capability-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .capability-list li::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        /* ============================================================
+           SECTION UTILITIES
+        ============================================================ */
+        .section {
+            padding: 80px 24px;
+        }
+
+        .section-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 560px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================================
+           CONTENT: 2-COL DELIVER + PROCESS
+        ============================================================ */
+        .content-section {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        /* Deliver list */
+        .deliver-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .deliver-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .deliver-list li .check {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .deliver-list li .check svg {
+            width: 12px;
+            height: 12px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Process steps */
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 28px;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 40px;
+            bottom: -8px;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .step-num {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--accent);
+            background: var(--accent-light);
+            border: 1.5px solid var(--accent-mid);
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-body {
+            padding-bottom: 28px;
+        }
+
+        .step-title {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .step-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ============================================================
+           FAQ ACCORDION
+        ============================================================ */
+        .faq-section { background: var(--bg-base); }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-item:last-child { border-bottom: none; }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 22px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            cursor: pointer;
+            text-align: left;
+            transition: background var(--transition);
+        }
+
+        .faq-question:hover { background: var(--bg-surface); }
+
+        .faq-question-text {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .faq-icon {
+            width: 20px;
+            height: 20px;
+            border: 1.5px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all var(--transition);
+            color: var(--accent);
+        }
+
+        .faq-item.open .faq-icon {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+        }
+
+        .faq-item.open .faq-answer { max-height: 200px; }
+
+        .faq-answer-inner {
+            padding: 0 24px 22px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           CTA BAND
+        ============================================================ */
+        .cta-band {
+            background: var(--accent);
+            padding: 72px 24px;
+            text-align: center;
+        }
+
+        .cta-band-inner {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .cta-band-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3vw, 2.25rem);
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .cta-band-desc {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .cta-band-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn-white {
+            background: #fff;
+            color: var(--accent);
+        }
+
+        .btn-white:hover {
+            background: #E3F2FD;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: #fff;
+            border: 1.5px solid rgba(255,255,255,0.5);
+        }
+
+        .btn-outline-white:hover {
+            background: rgba(255,255,255,0.12);
+            border-color: #fff;
+            transform: translateY(-1px);
+        }
+
+        /* ============================================================
+           RELATED CARDS
+        ============================================================ */
+        .related-section { background: var(--bg-surface); border-top: 1px solid var(--border); }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .related-card {
+            background: var(--bg-base);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            transition: all var(--transition);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .related-card:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .related-card-label {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .related-card-title {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .related-card-arrow {
+            margin-top: auto;
+            padding-top: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        .footer {
+            background: var(--text-primary);
+            color: rgba(255,255,255,0.75);
+            padding: 56px 24px 32px;
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand-name {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand-desc {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 20px;
+            max-width: 280px;
+        }
+
+        .footer-col-title {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            transition: color var(--transition);
+        }
+
+        .footer-links a:hover { color: #fff; }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-copy {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.35);
+        }
+
+        .footer-tagline {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.35);
+            font-style: italic;
+        }
+
+        /* ============================================================
+           DIVIDER
+        ============================================================ */
+        .divider {
+            height: 1px;
+            background: var(--border);
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        @media (max-width: 1024px) {
+            .related-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .nav-hamburger { display: flex; }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 36px;
+                padding: 36px 24px 48px;
+            }
+
+            .content-grid { grid-template-columns: 1fr; gap: 40px; }
+
+            .related-grid { grid-template-columns: 1fr; }
+
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+
+            .footer-bottom { flex-direction: column; text-align: center; }
+
+            .hero-actions { flex-direction: column; }
+
+            .cta-band-actions { flex-direction: column; align-items: center; }
+        }
+
+        @media (max-width: 480px) {
+            .section { padding: 56px 20px; }
+            .hero { padding: 28px 20px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVIGATION
+    ============================================================ -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <svg viewBox="24 40 112 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Compounding Prompts mark">
+                    <rect x="24" y="40" width="112" height="80" rx="16" ry="16" fill="none" stroke="rgba(31,122,255,0.26)" stroke-width="2"/>
+                    <rect x="32" y="46" width="96" height="68" rx="14" ry="14" fill="none" stroke="rgba(31,122,255,0.18)" stroke-width="2"/>
+                    <rect x="40" y="52" width="80" height="56" rx="12" ry="12" fill="none" stroke="rgba(31,122,255,0.12)" stroke-width="2"/>
+                    <polyline points="52,60 78,80 52,100" fill="none" stroke="rgba(31,122,255,0.55)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="47.2,60 73.2,80 47.2,100" fill="none" stroke="rgba(31,122,255,0.429)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <polyline points="42.4,60 68.4,80 42.4,100" fill="none" stroke="rgba(31,122,255,0.308)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="nav-logo-wordmark">
+                    <span class="wm-top">Compounding</span>
+                    <span class="wm-bot">Prompts</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" role="list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services/" class="active">Services</a></li>
+                <li><a href="/#process">Process</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#case-studies">Case Studies</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="/#contact" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile nav -->
+    <div class="nav-mobile" id="nav-mobile" role="navigation" aria-label="Mobile navigation">
+        <a href="/">Home</a>
+        <a href="/services/" class="active">Services</a>
+        <a href="/#process">Process</a>
+        <a href="/#about">About</a>
+        <a href="/#case-studies">Case Studies</a>
+        <div class="nav-mobile-cta">
+            <a href="/#contact" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         PAGE WRAPPER
+    ============================================================ -->
+    <div class="page-wrapper">
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="breadcrumb-sep" aria-hidden="true">/</span>
+            <a href="/services/">Services</a>
+            <span class="breadcrumb-sep" aria-hidden="true">/</span>
+            <span class="breadcrumb-current" aria-current="page">Data Analytics Consulting</span>
+        </nav>
+
+        <!-- ============================================================
+             HERO
+        ============================================================ -->
+        <section class="section" style="padding-bottom: 0;">
+            <div class="hero" style="padding-top: 40px; padding-bottom: 64px; max-width: 1200px; margin: 0 auto;">
+
+                <!-- Left: Copy -->
+                <div class="hero-left reveal">
+                    <div class="hero-label">Data Analytics</div>
+                    <h1 class="hero-title">Turn Data Into <span class="accent">Strategic Decisions</span></h1>
+                    <p class="hero-desc">We design data pipelines, build forecasting models, and automate reporting systems that give your leadership team a clear picture of business performance.</p>
+                    <div class="hero-actions">
+                        <a href="/#contact" class="btn btn-primary">Improve Your Analytics</a>
+                        <a href="/services/" class="btn btn-secondary">All Services</a>
+                    </div>
+                </div>
+
+                <!-- Right: Capabilities card -->
+                <div class="hero-right reveal" style="transition-delay: 0.1s;">
+                    <div class="hero-card">
+                        <div class="hero-card-title">Capabilities</div>
+                        <ul class="capability-list">
+                            <li>Data pipeline architecture</li>
+                            <li>Predictive modeling</li>
+                            <li>KPI automation</li>
+                            <li>Data governance frameworks</li>
+                            <li>Custom reporting systems</li>
+                            <li>Visualization and BI</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ============================================================
+             WHAT WE DELIVER + PROCESS
+        ============================================================ -->
+        <section class="section content-section">
+            <div class="section-inner">
+                <div class="content-grid">
+
+                    <!-- Left: What We Deliver -->
+                    <div class="reveal">
+                        <div class="section-label">What We Deliver</div>
+                        <h2 class="section-title">Built for Clarity at Every Level</h2>
+                        <p class="section-desc">Every deliverable is designed to be operated and extended by your team, not locked to a consultant.</p>
+                        <ul class="deliver-list">
+                            <li>
+                                <span class="check">
+                                    <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+                                </span>
+                                Data pipeline design and implementation
+                            </li>
+                            <li>
+                                <span class="check">
+                                    <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+                                </span>
+                                Predictive and forecasting models
+                            </li>
+                            <li>
+                                <span class="check">
+                                    <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+                                </span>
+                                KPI dashboards and automation
+                            </li>
+                            <li>
+                                <span class="check">
+                                    <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+                                </span>
+                                Data governance frameworks
+                            </li>
+                            <li>
+                                <span class="check">
+                                    <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+                                </span>
+                                Reporting system automation
+                            </li>
+                            <li>
+                                <span class="check">
+                                    <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+                                </span>
+                                Custom data visualizations
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Process -->
+                    <div class="reveal" style="transition-delay: 0.1s;">
+                        <div class="section-label">Our Process</div>
+                        <h2 class="section-title">From Raw Data to Operational Intelligence</h2>
+                        <div class="process-steps">
+
+                            <div class="process-step">
+                                <div class="step-num">01</div>
+                                <div class="step-body">
+                                    <div class="step-title">Data Audit</div>
+                                    <div class="step-desc">We map your existing data sources, identify gaps, and assess quality to establish a baseline for the engagement.</div>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-num">02</div>
+                                <div class="step-body">
+                                    <div class="step-title">Architecture Design</div>
+                                    <div class="step-desc">We design the pipeline and data model architecture to match your infrastructure, team capabilities, and reporting needs.</div>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-num">03</div>
+                                <div class="step-body">
+                                    <div class="step-title">Build Pipelines</div>
+                                    <div class="step-desc">We build and test the data pipelines, including cleaning, normalization, transformation, and storage layers.</div>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-num">04</div>
+                                <div class="step-body">
+                                    <div class="step-title">Model &amp; Validate</div>
+                                    <div class="step-desc">We build and validate forecasting and predictive models against historical data, tuning for accuracy and reliability.</div>
+                                </div>
+                            </div>
+
+                            <div class="process-step">
+                                <div class="step-num">05</div>
+                                <div class="step-body">
+                                    <div class="step-title">Automate &amp; Deliver</div>
+                                    <div class="step-desc">We automate reporting, hand off documentation, and walk your team through operating the full system independently.</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ============================================================
+             FAQ
+        ============================================================ -->
+        <section class="section faq-section">
+            <div class="section-inner">
+                <div class="section-label reveal">Common Questions</div>
+                <h2 class="section-title reveal">Frequently Asked Questions</h2>
+                <p class="section-desc reveal">Everything you need to know before starting a data analytics engagement.</p>
+
+                <div class="faq-list reveal" style="max-width: 760px;">
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-question-text">How long does a data analytics engagement take?</span>
+                            <span class="faq-icon" aria-hidden="true">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <line x1="5" y1="1" x2="5" y2="9"/>
+                                    <line x1="1" y1="5" x2="9" y2="5"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Most data analytics engagements run 3 to 6 weeks depending on data complexity and scope. We begin with a data audit and deliver a working pipeline, models, and automated reporting by the end of the engagement.</div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-question-text">Do we own the pipelines and models you build?</span>
+                            <span class="faq-icon" aria-hidden="true">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <line x1="5" y1="1" x2="5" y2="9"/>
+                                    <line x1="1" y1="5" x2="9" y2="5"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Yes, full ownership. Every pipeline, model, dashboard, and data asset we build is yours. We document everything and hand it off cleanly so your team can operate and extend it independently.</div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span class="faq-question-text">What if our data is messy or incomplete?</span>
+                            <span class="faq-icon" aria-hidden="true">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <line x1="5" y1="1" x2="5" y2="9"/>
+                                    <line x1="1" y1="5" x2="9" y2="5"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">That is expected. Data cleaning and normalization is built into the engagement from the start. We account for messy source data in our architecture design and budget, so you are not penalized for starting from a realistic baseline.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             CTA BAND
+        ============================================================ -->
+        <section class="cta-band">
+            <div class="cta-band-inner reveal">
+                <h2 class="cta-band-title">Make your data work harder</h2>
+                <p class="cta-band-desc">Turn scattered spreadsheets and siloed systems into a unified analytics layer your leadership team can act on.</p>
+                <div class="cta-band-actions">
+                    <a href="/#contact" class="btn btn-white">Improve Your Analytics</a>
+                    <a href="/services/dashboards-analytics/" class="btn btn-outline-white">Explore Dashboards &amp; Analytics</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             RELATED
+        ============================================================ -->
+        <section class="section related-section">
+            <div class="section-inner">
+                <div class="section-label reveal">Explore More</div>
+                <h2 class="section-title reveal">Related Services &amp; Resources</h2>
+
+                <div class="related-grid">
+
+                    <a href="/services/dashboards-analytics/" class="related-card reveal">
+                        <div class="related-card-label">Service</div>
+                        <div class="related-card-title">Dashboards &amp; Analytics</div>
+                        <div class="related-card-arrow">
+                            View service
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 7h10M8 3l4 4-4 4"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <a href="/services/custom-ai-apps/" class="related-card reveal" style="transition-delay: 0.05s;">
+                        <div class="related-card-label">Service</div>
+                        <div class="related-card-title">Custom AI Apps</div>
+                        <div class="related-card-arrow">
+                            View service
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 7h10M8 3l4 4-4 4"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <a href="/services/" class="related-card reveal" style="transition-delay: 0.1s;">
+                        <div class="related-card-label">Overview</div>
+                        <div class="related-card-title">All AI Consulting Services</div>
+                        <div class="related-card-arrow">
+                            View all
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 7h10M8 3l4 4-4 4"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <a href="/#process" class="related-card reveal" style="transition-delay: 0.15s;">
+                        <div class="related-card-label">How We Work</div>
+                        <div class="related-card-title">AI Implementation Process</div>
+                        <div class="related-card-arrow">
+                            Learn more
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 7h10M8 3l4 4-4 4"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+             FOOTER
+        ============================================================ -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+
+                    <div class="footer-brand">
+                        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+                            <svg viewBox="24 40 112 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Compounding Prompts mark" style="width:42px;height:30px;flex-shrink:0;">
+                                <rect x="24" y="40" width="112" height="80" rx="16" ry="16" fill="none" stroke="rgba(31,122,255,0.26)" stroke-width="2"/>
+                                <rect x="32" y="46" width="96" height="68" rx="14" ry="14" fill="none" stroke="rgba(31,122,255,0.18)" stroke-width="2"/>
+                                <rect x="40" y="52" width="80" height="56" rx="12" ry="12" fill="none" stroke="rgba(31,122,255,0.12)" stroke-width="2"/>
+                                <polyline points="52,60 78,80 52,100" fill="none" stroke="rgba(31,122,255,0.55)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="47.2,60 73.2,80 47.2,100" fill="none" stroke="rgba(31,122,255,0.429)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="42.4,60 68.4,80 42.4,100" fill="none" stroke="rgba(31,122,255,0.308)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="footer-brand-name">Compounding Prompts</div>
+                        </div>
+                        <p class="footer-brand-desc">AI consulting for SMBs. We build systems that compound — every automation, integration, and model makes the next one faster.</p>
+                    </div>
+
+                    <div>
+                        <div class="footer-col-title">Services</div>
+                        <ul class="footer-links">
+                            <li><a href="/services/workflow-automation/">Workflow Automation</a></li>
+                            <li><a href="/services/custom-ai-apps/">Custom AI Apps</a></li>
+                            <li><a href="/services/data-analytics-consulting/">Data Analytics</a></li>
+                            <li><a href="/services/dashboards-analytics/">Dashboards &amp; BI</a></li>
+                            <li><a href="/services/api-integrations/">API Integrations</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="footer-col-title">More Services</div>
+                        <ul class="footer-links">
+                            <li><a href="/services/websites-web-apps/">Websites &amp; Web Apps</a></li>
+                            <li><a href="/services/pmo-systems/">PMO Systems</a></li>
+                            <li><a href="/services/ai-readiness/">AI Readiness</a></li>
+                            <li><a href="/services/recruiter-career-tools/">Recruiter Tools</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="footer-col-title">Company</div>
+                        <ul class="footer-links">
+                            <li><a href="/#about">About</a></li>
+                            <li><a href="/#process">Process</a></li>
+                            <li><a href="/#case-studies">Case Studies</a></li>
+                            <li><a href="/#contact">Contact</a></li>
+                            <li><a href="/services/">All Services</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-copy">&copy; 2026 Compounding Prompts. All rights reserved.</div>
+                    <div class="footer-tagline">Every system compounds.</div>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- /page-wrapper -->
+
+    <!-- ============================================================
+         JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // Nav toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMobile = document.getElementById('nav-mobile');
+
+        if (navToggle && navMobile) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navMobile.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', isOpen.toString());
+                const spans = navToggle.querySelectorAll('span');
+                if (isOpen) {
+                    spans[0].style.transform = 'translateY(7px) rotate(45deg)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+                } else {
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '';
+                    spans[2].style.transform = '';
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navToggle.contains(e.target) && !navMobile.contains(e.target)) {
+                    navMobile.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    const spans = navToggle.querySelectorAll('span');
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '';
+                    spans[2].style.transform = '';
+                }
+            });
+        }
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('open');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Open clicked if it was closed
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Reveal on scroll
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+
+</body>
+</html>
