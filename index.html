@@ -24,6 +24,11 @@
     <link rel="canonical" href="https://compoundingprompts.ai">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,13 +127,13 @@
             /* Text */
             --text-1: #263238;
             --text-2: #546E7A;
-            --text-3: #90A4AE;
+            --text-3: #7A929C;
 
             /* Borders */
             --border: #C8CCD0;
 
             /* Status */
-            --ok: #10B981;
+            --ok: #0B7D56;
             --warn: #F59E0B;
             --crit: #EF4444;
             --info: #1565C0;
@@ -243,7 +248,7 @@
             letter-spacing: -0.2px;
         }
         .nav-logo-wordmark .wm-top { color: #1b1f2a; }
-        .nav-logo-wordmark .wm-bot { color: #1f7aff; }
+        .nav-logo-wordmark .wm-bot { color: var(--accent); }
         .nav-links {
             display: flex;
             align-items: center;
@@ -803,10 +808,10 @@
             letter-spacing: -0.1px;
         }
         .footer-wordmark .wm-top { color: #1b1f2a; }
-        .footer-wordmark .wm-bot { color: #1f7aff; }
+        .footer-wordmark .wm-bot { color: var(--accent); }
         .footer-right {
             font-size: 0.8rem;
-            color: var(--text-3);
+            color: var(--text-2);
         }
 
         /* ===== ANIMATIONS ===== */
@@ -893,13 +898,14 @@
         </div>
     </nav>
 
+    <main>
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
                 <span class="hero-label">AI CONSULTING FOR GROWING COMPANIES</span>
                 <h1>AI solutions that <span class="accent">compound.</span></h1>
-                <p>We build production-grade AI for small-to-medium businesses. Workflow automation, custom apps, dashboards, data analytics, financial modeling, and more. All at a fraction of traditional consulting costs.</p>
+                <p>Workflow automation, custom apps, dashboards, data analytics, and financial modeling — built for your business and priced for your budget. Production-grade AI you actually own.</p>
                 <div class="hero-actions">
                     <a href="#contact" class="btn btn-primary">Book Free Consultation</a>
                     <a href="#portfolio" class="btn btn-secondary">See Our Work</a>
@@ -911,7 +917,7 @@
                     </div>
                     <div>
                         <div class="hero-stat-value">100%</div>
-                        <div class="hero-stat-label">Ownership. No Lock-In.</div>
+                        <div class="hero-stat-label">Yours. No Lock-In.</div>
                     </div>
                     <div>
                         <div class="hero-stat-value">US</div>
@@ -1412,6 +1418,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
@@ -1430,7 +1438,7 @@
                 </div>
             </div>
             <div class="footer-right">
-                <a href="/ai-consulting-for-small-business/" style="color:var(--text-3);font-size:0.8rem;margin-right:20px;transition:var(--transition);" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-3)'">AI Consulting Guide</a>
+                <a href="/ai-consulting-for-small-business/" style="color:var(--text-2);font-size:0.8rem;margin-right:20px;transition:var(--transition);text-decoration:underline;text-underline-offset:2px;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-2)'">AI Consulting Guide</a>
                 &copy; 2026 Compounding Prompts. All rights reserved.
             </div>
         </div>

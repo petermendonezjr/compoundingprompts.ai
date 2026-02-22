@@ -61,8 +61,8 @@
             --bg-base: #F7F5F0; --bg-surface: #FFFFFF; --bg-elevated: #EDF0F4;
             --accent: #1565C0; --accent-light: #1976D2; --accent-dark: #0D47A1;
             --accent-glow: rgba(21, 101, 192, 0.06); --accent-warm: #E8F0FE;
-            --secondary: #00897B; --text-1: #263238; --text-2: #546E7A; --text-3: #90A4AE;
-            --border: #C8CCD0; --ok: #10B981;
+            --secondary: #00897B; --text-1: #263238; --text-2: #546E7A; --text-3: #7A929C;
+            --border: #C8CCD0; --ok: #0B7D56;
             --radius-card: 12px; --radius-btn: 8px; --radius-pill: 9999px;
             --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
             --shadow-elevated: 0 4px 12px rgba(0,0,0,0.08), 0 16px 48px rgba(0,0,0,0.06);
@@ -91,7 +91,7 @@
         .nav-logo-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
         .nav-logo-wordmark span { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 650; letter-spacing: -0.2px; }
         .nav-logo-wordmark .wm-top { color: #1b1f2a; }
-        .nav-logo-wordmark .wm-bot { color: #1f7aff; }
+        .nav-logo-wordmark .wm-bot { color: var(--accent); }
         .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
         .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--text-2); transition: var(--transition); }
         .nav-links a:hover { color: var(--text-1); }
@@ -183,8 +183,8 @@
         .footer-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
         .footer-wordmark span { font-family: var(--font-heading); font-size: 0.8rem; font-weight: 650; letter-spacing: -0.1px; }
         .footer-wordmark .wm-top { color: #1b1f2a; }
-        .footer-wordmark .wm-bot { color: #1f7aff; }
-        .footer-right { font-size: 0.8rem; color: var(--text-3); }
+        .footer-wordmark .wm-bot { color: var(--accent); }
+        .footer-right { font-size: 0.8rem; color: var(--text-2); }
 
         /* ANIMATIONS */
         .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -235,6 +235,8 @@
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
         </div>
     </nav>
+
+    <main>
 
     <div class="breadcrumb">
         <div class="container">

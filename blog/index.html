@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Insights for Small Business | Compounding Prompts Blog</title>
     <meta name="description" content="Practical AI guides, automation tips, and case studies for small-to-medium businesses. No jargon, just results.">
-    <meta name="keywords" content="AI blog, small business AI, automation tips, AI consulting blog, AI for SMB">
+    <meta name="keywords" content="AI blog, small business AI, automation tips, AI consulting blog, AI for small business">
     <meta name="author" content="Compounding Prompts">
     <meta name="robots" content="index, follow">
 
@@ -18,6 +18,11 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://compoundingprompts.ai/blog/">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,9 +41,9 @@
             --secondary: #00897B;
             --text-1: #263238;
             --text-2: #546E7A;
-            --text-3: #90A4AE;
+            --text-3: #7A929C;
             --border: #C8CCD0;
-            --ok: #10B981;
+            --ok: #0B7D56;
             --radius-card: 12px;
             --radius-btn: 8px;
             --radius-pill: 9999px;
@@ -86,7 +91,7 @@
         .nav-logo-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
         .nav-logo-wordmark span { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 650; letter-spacing: -0.2px; }
         .nav-logo-wordmark .wm-top { color: #1b1f2a; }
-        .nav-logo-wordmark .wm-bot { color: #1f7aff; }
+        .nav-logo-wordmark .wm-bot { color: var(--accent); }
         .nav-links {
             display: flex;
             align-items: center;
@@ -225,10 +230,10 @@
         .footer-wordmark { display: flex; flex-direction: column; line-height: 1.15; }
         .footer-wordmark span { font-family: var(--font-heading); font-size: 0.8rem; font-weight: 650; letter-spacing: -0.1px; }
         .footer-wordmark .wm-top { color: #1b1f2a; }
-        .footer-wordmark .wm-bot { color: #1f7aff; }
+        .footer-wordmark .wm-bot { color: var(--accent); }
         .footer-right {
             font-size: 0.8rem;
-            color: var(--text-3);
+            color: var(--text-2);
         }
 
         @media (max-width: 768px) {
@@ -258,15 +263,17 @@
                 </div>
             </a>
             <ul class="nav-links">
-                <li><a href="/#services">Services</a></li>
+                <li><a href="/services/">Services</a></li>
                 <li><a href="/#portfolio">Portfolio</a></li>
                 <li><a href="/#process">How It Works</a></li>
+                <li><a href="/#faq">FAQ</a></li>
                 <li><a href="/blog/" style="color: var(--accent); font-weight: 600;">Blog</a></li>
                 <li><a href="/#contact" class="nav-cta">Free Consultation</a></li>
             </ul>
         </div>
     </nav>
 
+    <main>
     <!-- ===== BLOG HEADER ===== -->
     <section class="blog-header">
         <div class="container">
@@ -298,6 +305,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
